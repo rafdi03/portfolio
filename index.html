@@ -342,207 +342,97 @@
 
     <script>
         const projectsData = [
-            {
-                id: "project-1",
-                title: "RAF RTOS-ESP32 — Embedded Firmware Framework",
-                category: "Embedded Systems / FreeRTOS",
-                icon: "fa-microchip",
-                description: "A modular ESP-IDF firmware framework designed to simplify the development of real-time ESP32 applications. It brings scheduling, communication, data logging, OTA updates, and system observability into a reusable application structure.",
-                features: [
-                    "Descriptor-based FreeRTOS task scheduler for periodic application jobs",
-                    "Centralized communication hub supporting UART, Modbus, LoRa, Wi-Fi, MQTT, CAN and ESP-NOW",
-                    "Binary data logging with ping-pong buffering, CRC-32 validation and recovery handling",
-                    "Browser-based firmware update through an embedded web server"
-                ],
-                tech: ["ESP32", "ESP-IDF 5.x", "FreeRTOS", "C / C++", "Modbus", "MQTT"],
-                github: "https://github.com/rafdi03/RAF_RTOS-ESP32_0.1v",
-                images: [
-                    ["https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80", "Embedded hardware and firmware architecture"]
-                ]
-            },
-            {
-                id: "project-2",
-                title: "ESP32 Embedded Health Monitoring System",
-                category: "Embedded / Sensor Systems",
-                icon: "fa-heart-pulse",
-                description: "An ESP32-based monitoring system integrating physiological sensors for heart rate, body temperature and blood oxygen measurements, with signal processing and wireless data transmission.",
-                features: [
-                    "Sensor acquisition and digital filtering for physiological signals",
-                    "ESP32 firmware structured around real-time embedded tasks",
-                    "Wireless telemetry using Wi-Fi and MQTT",
-                    "Designed with low-power operation in mind"
-                ],
-                tech: ["ESP32", "C / C++", "FreeRTOS", "MAX30102", "MQTT", "Grafana"],
-                github: "https://github.com/rafdi03/s3_health_monitor",
-                images: [
-                    ["https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80", "Microcontroller and sensor integration"]
-                ]
-            },
-            {
-                id: "project-3",
-                title: "LoRa Radiation Telemetry & Monitoring System",
-                category: "Wireless Telemetry / IoT",
-                icon: "fa-tower-broadcast",
-                description: "A long-range telemetry system for transmitting radiation measurements and environmental data between field devices and a gateway. The system combines LoRa communication, serial interfaces and a lightweight monitoring backend.",
-                features: [
-                    "LoRa point-to-point communication for remote telemetry",
-                    "Integration with Ludlum 375 radiation measurement equipment",
-                    "Raspberry Pi gateway with serial communication and data processing",
-                    "Local data storage and browser-based monitoring"
-                ],
-                tech: ["LoRa", "Arduino", "Raspberry Pi", "RS485", "Python", "SQLite"],
-                github: "https://github.com/rafdi03/IoT-Radiation-Monitoring-via-LoRa-",
-                images: [
-                    ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80", "LoRa wireless telemetry"]
-                ]
-            },
-            {
-                id: "project-4",
-                title: "IoT Water Pump & Smart Irrigation Controller",
-                category: "Automation / Control",
-                icon: "fa-droplet",
-                description: "An automated irrigation concept combining soil-moisture sensing, scheduled operation and external weather information to control a water pump while providing manual override capabilities.",
-                features: [
-                    "Automatic pump control based on sensor thresholds",
-                    "Scheduled operation and manual override",
-                    "Web-connected monitoring and control",
-                    "Protection logic for the controlled pump load"
-                ],
-                tech: ["STM32 / ESP8266", "Relay", "Node.js", "Express", "Tailwind CSS"],
-                github: "https://github.com/rafdi03/Ludlum_Monitoring",
-                images: [
-                    ["https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=1200&q=80", "Controller and relay integration"]
-                ]
-            },
-            {
-                id: "project-5",
-                title: "Scalable Data Pipeline & Python Analytics",
-                category: "Data Engineering",
-                icon: "fa-database",
-                description: "A data-processing architecture for transforming raw event data into structured analytical datasets using Python, dbt and PostgreSQL, with containerized and scheduled processing components.",
-                features: [
-                    "Structured transformation workflows with dbt",
-                    "Automated testing and data documentation",
-                    "Scheduled batch and streaming-oriented processing",
-                    "Pipeline monitoring and error notification concepts"
-                ],
-                tech: ["Python", "dbt", "Apache Airflow", "PostgreSQL", "Docker"],
-                github: "https://github.com/rafdi03",
-                images: [
-                    ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80", "Data modeling and analytics"]
-                ]
-            },
-            {
-                id: "project-6",
-                title: "Crabs Aquasense — Smart Pond Monitoring",
-                category: "IoT / Aquaculture",
-                icon: "fa-water",
-                description: "A real-time pond monitoring and control system using ESP32 sensor nodes, MQTT messaging and a Django-based web interface. The system is designed to centralize water-quality data and provide remote relay control.",
-                features: [
-                    "Real-time water parameter monitoring through a web interface",
-                    "ESP32 sensor communication using MQTT",
-                    "Web-based relay control for water management",
-                    "Historical sensor storage and threshold-based classification"
-                ],
-                tech: ["ESP32", "Python", "Django", "WebSockets", "MQTT / EMQX", "SQLite"],
-                github: "https://github.com/rafdi03/Crabs_project",
-                images: [
-                    ["https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80", "Embedded monitoring node"]
-                ]
-            },
-            {
-                id: "project-7",
-                title: "Hybrid Solar & Wind Energy Monitoring",
-                category: "Renewable Energy / Embedded",
-                icon: "fa-solar-panel",
-                description: "An ESP32-based monitoring and automatic source-selection system for a hybrid solar and wind power setup. The firmware reads electrical parameters through Modbus RTU and I2C, applies source-selection logic, and publishes telemetry through MQTT.",
-                features: [
-                    "Real-time PV, battery, SOC, energy and wind-turbine monitoring",
-                    "Automatic source selection based on measured power",
-                    "Modbus RTU over RS485 and I2C INA219 integration",
-                    "MQTT JSON telemetry with watchdog protection"
-                ],
-                tech: ["ESP32", "Modbus RTU", "RS485", "INA219", "MQTT", "FreeRTOS"],
-                github: "https://github.com/rafdi03",
-                live: "https://enerbrida.apps-chi.com/",
-                images: [
-                    ["https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1200&q=80", "Hybrid renewable energy system"]
-                ]
-            },
-            {
-                id: "project-8",
-                title: "Automatic Water Filtration for House Pets",
-                category: "IoT / Smart Automation",
-                icon: "fa-cat",
-                description: "An ESP32-based automatic drinking-water filtration and monitoring system integrating water level, turbidity and pH-related sensing with relay and solenoid control, plus cloud-connected logging.",
-                features: [
-                    "Automatic water-level monitoring and refill control",
-                    "Turbidity measurement and digital water-quality classification",
-                    "Scheduled filtration and pump-cleaning cycles",
-                    "Blynk dashboard and offline data handling when Wi-Fi is unavailable"
-                ],
-                tech: ["ESP32", "C / C++", "Blynk IoT", "Google Apps Script", "HTTPClient", "Relay"],
-                github: "https://github.com/rafdi03/IoT-Based-Automatic-Water-Filtration-for-House-Pets",
-                images: [
-                    ["https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=1200&q=80", "Automated filtration concept"]
-                ]
-            },
-            {
-                id: "project-9",
-                title: "ESP32 Robotic Hand & Rehabilitation Glove",
-                category: "Robotics / Control",
-                icon: "fa-hand-holding-medical",
-                description: "A five-channel assistive glove prototype using flex sensors and servo motors to reproduce controlled finger movement. The system applies PID control and includes a programmed rehabilitation cycle.",
-                features: [
-                    "Five-channel servo actuation with flex-sensor feedback",
-                    "PID-based control for more stable finger positioning",
-                    "Programmable grip, hold, release and rest sequence",
-                    "Automatic stop protection and wireless session reporting"
-                ],
-                tech: ["ESP32", "C / C++", "PID Control", "Servo", "Flex Sensors", "Telegram Bot"],
-                github: "https://github.com/rafdi03/Hand_Rehabilitations",
-                images: [
-                    ["https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80", "Assistive robotics prototype"]
-                ]
-            },
-            {
-                id: "project-10",
-                title: "FaceFinger Lock — Dual Authentication Smart Lock",
-                category: "Computer Vision / Embedded",
-                icon: "fa-shield-halved",
-                description: "A smart-lock prototype combining fingerprint verification and face recognition as two authentication stages. The architecture connects embedded hardware, camera capture, Python-based recognition and relay-controlled door actuation.",
-                features: [
-                    "Two-stage fingerprint and face authentication",
-                    "UART communication between embedded devices",
-                    "Python-based face recognition processing",
-                    "Real-time status indication and relay-controlled lock actuation"
-                ],
-                tech: ["Arduino Nano", "ESP32-CAM", "Python", "dlib", "Face Recognition", "UART / Wi-Fi"],
-                github: "https://github.com/rafdi03/FaceFinger_Lock",
-                images: [
-                    ["https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1200&q=80", "Smart access-control concept"]
-                ]
-            },
-            {
-                id: "project-11",
-                title: "Hydroponic Nutrient Monitoring System",
-                category: "IoT / Smart Agriculture",
-                icon: "fa-seedling",
-                description: "An ESP32-based hydroponic monitoring and control system measuring nutrient concentration and water level while controlling pumps and valves. Local status is displayed on an LCD and telemetry can be reported remotely.",
-                features: [
-                    "TDS and ultrasonic water-level monitoring",
-                    "Automatic control of a four-channel relay and 360° servo valve",
-                    "RTC-based timestamping with local LCD status",
-                    "Telegram notifications and Google Sheets logging"
-                ],
-                tech: ["ESP32", "C / C++", "TDS Sensor", "JSN-SR04", "DS3231", "Telegram Bot"],
-                github: "https://github.com/rafdi03/IoT-Based-Hydroponic-Nutrient-Monitoring-System",
-                images: [
-                    ["https:C:/Users/Rafdi/OneDrive/Dokumen/GitHub/portfolio/Hydroponic.jpeg", "Automated hydroponic monitoring"]
-                ]
-            }
-        ];
-
+                            {
+                                id: "project-1",
+                                title: "RAF RTOS-ESP32 — Embedded Firmware Framework",
+                                category: "Embedded Systems / FreeRTOS",
+                                description: "A modular ESP-IDF firmware framework designed to simplify the development of real-time ESP32 applications. It brings scheduling, communication, data logging, OTA updates, and system observability into a reusable application structure.",
+                                features: [
+                                    "Descriptor-based FreeRTOS task scheduler for periodic application jobs",
+                                    "Centralized communication hub supporting UART, Modbus, LoRa, Wi-Fi, MQTT, CAN and ESP-NOW",
+                                    "Binary data logging with ping-pong buffering, CRC-32 validation and recovery handling",
+                                    "Browser-based firmware update through an embedded web server"
+                                ],
+                                tech: ["ESP32", "ESP-IDF 5.x", "FreeRTOS", "C / C++", "Modbus", "MQTT"],
+                                github: "https://github.com/rafdi03/RAF_RTOS-ESP32_0.1v",
+                                images: [
+                                    ["./Monitoring_kesehatan.jpeg", "Embedded hardware and firmware architecture"],
+                                    ["./Monitoring_kesehatan_pcb.jpeg", "PCB layout and testing"]
+                                ]
+                            },
+                            {
+                                id: "project-2",
+                                title: "ESP32 Embedded Health Monitoring System",
+                                category: "Embedded / Sensor Systems",
+                                description: "An ESP32-based monitoring system integrating physiological sensors for heart rate, body temperature and blood oxygen measurements, with signal processing and wireless data transmission.",
+                                features: [
+                                    "Sensor acquisition and digital filtering for physiological signals",
+                                    "ESP32 firmware structured around real-time embedded tasks",
+                                    "Wireless telemetry using Wi-Fi and MQTT",
+                                    "Designed with low-power operation in mind"
+                                ],
+                                tech: ["ESP32", "C / C++", "FreeRTOS", "MAX30102", "MQTT", "Grafana"],
+                                github: "https://github.com/rafdi03/s3_health_monitor",
+                                images: [
+                                    ["./Monitoring_kesehatan.jpeg", "Microcontroller and sensor integration"],
+                                    ["./Monitoring_kesehatan_pcb.jpeg", "Hardware design and PCB"]
+                                ]
+                            },
+                            {
+                                id: "project-6",
+                                title: "Crabs Aquasense — Smart Pond Monitoring",
+                                category: "IoT / Aquaculture",
+                                description: "A real-time pond monitoring and control system using ESP32 sensor nodes, MQTT messaging and a Django-based web interface. The system is designed to centralize water-quality data and provide remote relay control.",
+                                features: [
+                                    "Real-time water parameter monitoring through a web interface",
+                                    "ESP32 sensor communication using MQTT",
+                                    "Web-based relay control for water management",
+                                    "Historical sensor storage and threshold-based classification"
+                                ],
+                                tech: ["ESP32", "Python", "Django", "WebSockets", "MQTT / EMQX", "SQLite"],
+                                github: "https://github.com/rafdi03/Crabs_project",
+                                images: [
+                                    ["./Crabs_Desain.jpeg", "System UI and architecture design"],
+                                    ["./Crabs_pcb.jpeg", "PCB layout and controller board"]
+                                ]
+                            },
+                            {
+                                id: "project-7",
+                                title: "Hybrid Solar & Wind Energy Monitoring",
+                                category: "Renewable Energy / Embedded",
+                                description: "An ESP32-based monitoring and automatic source-selection system for a hybrid solar and wind power setup. The firmware reads electrical parameters through Modbus RTU and I2C, applies source-selection logic, and publishes telemetry through MQTT.",
+                                features: [
+                                    "Real-time PV, battery, SOC, energy and wind-turbine monitoring",
+                                    "Automatic source selection based on measured power",
+                                    "Modbus RTU over RS485 and I2C INA219 integration",
+                                    "MQTT JSON telemetry with watchdog protection"
+                                ],
+                                tech: ["ESP32", "Modbus RTU", "RS485", "INA219", "MQTT", "FreeRTOS"],
+                                github: "https://github.com/rafdi03",
+                                live: "https://enerbrida.apps-chi.com/",
+                                images: [
+                                    ["./Monitoring_Hybrid.jpeg", "Hybrid energy system monitoring board"]
+                                ]
+                            },
+                            {
+                                id: "project-11",
+                                title: "Hydroponic Nutrient Monitoring System",
+                                category: "IoT / Smart Agriculture",
+                                description: "An ESP32-based hydroponic monitoring and control system measuring nutrient concentration and water level while controlling pumps and valves. Local status is displayed on an LCD and telemetry can be reported remotely.",
+                                features: [
+                                    "TDS and ultrasonic water-level monitoring",
+                                    "Automatic control of a four-channel relay and 360° servo valve",
+                                    "RTC-based timestamping with local LCD status",
+                                    "Telegram notifications and Google Sheets logging"
+                                ],
+                                tech: ["ESP32", "C / C++", "TDS Sensor", "JSN-SR04", "DS3231", "Telegram Bot"],
+                                github: "https://github.com/rafdi03/IoT-Based-Hydroponic-Nutrient-Monitoring-System",
+                                images: [
+                                    ["./Hydroponic.jpeg", "System assembly and operational test"],
+                                    ["./Hidroponic_PCB.jpeg", "Custom PCB board design"]
+                                ]
+                            }
+                        ];
         function projectCard(project) {
             return `
                 <article id="${project.id}" class="project-card glass rounded-2xl overflow-hidden">
