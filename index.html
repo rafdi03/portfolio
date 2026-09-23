@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aryaguna Abi Rafdi Yasa — Electrical Engineering portfolio focused on embedded systems, IoT, firmware, industrial communication, and hardware integration.">
+    <meta name="theme-color" content="#070a0f">
+    <title>Aryaguna Abi Rafdi Yasa | Electrical & Embedded Systems Engineer</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Library html2pdf.js dengan konfigurasi cross-origin yang aman -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        :root {
+            --bg: #070a0f;
+            --panel: #0d121a;
+            --panel-2: #101722;
+            --line: rgba(255,255,255,.08);
+            --muted: #8b98a9;
+            --text: #edf2f7;
+            --accent: #6ee7b7;
+            --accent-2: #60a5fa;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(circle at 75% 5%, rgba(96,165,250,.10), transparent 28rem),
+                radial-gradient(circle at 15% 25%, rgba(110,231,183,.06), transparent 24rem),
+                var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1,h2,h3,h4 { letter-spacing: -.025em; }
+
+        .mono { font-family: 'DM Mono', monospace; }
+
+        .grid-bg {
+            background-image:
+                linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+            background-size: 44px 44px;
+            mask-image: linear-gradient(to bottom, black, transparent 78%);
+            -webkit-mask-image: linear-gradient(to bottom, black, transparent 78%);
+        }
+
+        .glass {
+            background: rgba(13,18,26,.72);
+            border: 1px solid var(--line);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+
+        .project-card {
+            transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(110,231,183,.28);
+            box-shadow: 0 22px 70px rgba(0,0,0,.32);
+        }
+
+        .project-image {
+            transition: transform .7s cubic-bezier(.2,.7,.2,1);
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.045);
+        }
+
+        .tag {
+            border: 1px solid rgba(255,255,255,.08);
+            background: rgba(255,255,255,.035);
+        }
+
+        .accent-line {
+            background: linear-gradient(90deg, var(--accent), var(--accent-2), transparent);
+        }
+
+        .fade-up {
+            animation: fadeUp .75s ease both;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .marquee-track {
+            width: max-content;
+            animation: marquee 42s linear infinite;
+        }
+
+        .marquee-track:hover { animation-play-state: paused; }
+
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        .highlight {
+            animation: highlight 1.8s ease;
+        }
+
+        @keyframes highlight {
+            0%,100% { box-shadow: 0 0 0 0 rgba(110,231,183,0); }
+            35% { box-shadow: 0 0 0 5px rgba(110,231,183,.16), 0 20px 80px rgba(110,231,183,.12); }
+        }
+
+        ::selection { background: rgba(110,231,183,.28); color: white; }
+
+        ::-webkit-scrollbar { width: 9px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: #263140; border-radius: 999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3b4859; }
+
+        @media print {
+            .no-print { display: none !important; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fixed inset-0 pointer-events-none grid-bg"></div>
+
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 border-b border-white/[.06] bg-[#070a0f]/80 backdrop-blur-xl no-print">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+            <a href="#top" class="flex items-center gap-3 group">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-300 shadow-[0_0_16px_rgba(110,231,183,.65)]"></span>
+                <span class="font-semibold tracking-tight">ARYAGUNA<span class="text-slate-500">/</span>ENGINEERING</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-7 text-sm text-slate-400">
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#projects" class="hover:text-white transition">Projects</a>
+                <a href="#capabilities" class="hover:text-white transition">Capabilities</a>
+                <a href="https://github.com/rafdi03" target="_blank" rel="noopener noreferrer" class="text-slate-200 hover:text-emerald-300 transition">
+                    GitHub <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-1"></i>
+                </a>
+                <button onclick="downloadPDF()" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-emerald-400/10 border border-emerald-400/30 text-emerald-300 text-xs font-semibold hover:bg-emerald-400/20 transition">
+                    <i class="fa-solid fa-download"></i> Save as PDF
+                </button>
+            </nav>
+
+            <div class="md:hidden flex items-center gap-3">
+                <button onclick="downloadPDF()" class="text-emerald-300 p-1">
+                    <i class="fa-solid fa-download text-lg"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="pdf-container">
+        <main id="top" class="relative z-10">
+            <!-- Hero -->
+            <section class="max-w-7xl mx-auto px-5 sm:px-8 pt-12 md:pt-20 pb-16">
+                <div class="max-w-5xl fade-up">
+                    <div class="mono text-xs sm:text-sm text-emerald-300/90 mb-6">
+                        <span class="text-slate-600">01 //</span> ELECTRICAL ENGINEERING · EMBEDDED SYSTEMS · IOT
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.03] tracking-[-.045em]">
+                        Aryaguna Abi<br>
+                        <span class="text-slate-500">Rafdi Yasa.</span>
+                    </h1>
+
+                    <div class="accent-line h-px w-28 my-8"></div>
+
+                    <p class="max-w-3xl text-lg sm:text-xl leading-8 text-slate-300">
+                        Electrical Engineering graduate focused on building reliable embedded systems,
+                        firmware, industrial communication, and IoT solutions from sensor-level hardware
+                        to real-time monitoring.
+                    </p>
+
+                    <div class="flex flex-wrap gap-3 mt-8 no-print">
+                        <button onclick="downloadPDF()" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-emerald-300 text-slate-950 font-semibold hover:bg-emerald-200 transition">
+                            <i class="fa-solid fa-download"></i> Download PDF Now
+                        </button>
+                        <a href="https://github.com/rafdi03" target="_blank" rel="noopener noreferrer"
+                           class="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/10 bg-white/[.03] text-slate-200 hover:bg-white/[.07] transition">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid sm:grid-cols-3 gap-px mt-16 overflow-hidden rounded-xl border border-white/[.07] bg-white/[.07]">
+                    <div class="bg-[#0b1017]/90 p-6">
+                        <div class="mono text-xs text-slate-500 mb-3">FOCUS</div>
+                        <div class="font-semibold">Embedded & Firmware</div>
+                        <div class="text-sm text-slate-500 mt-1">ESP32 · STM32/APM32 · FreeRTOS</div>
+                    </div>
+                    <div class="bg-[#0b1017]/90 p-6">
+                        <div class="mono text-xs text-slate-500 mb-3">SYSTEMS</div>
+                        <div class="font-semibold">Industrial IoT</div>
+                        <div class="text-sm text-slate-500 mt-1">Modbus · RS485 · MQTT · Telemetry</div>
+                    </div>
+                    <div class="bg-[#0b1017]/90 p-6">
+                        <div class="mono text-xs text-slate-500 mb-3">APPROACH</div>
+                        <div class="font-semibold">Hardware to Data</div>
+                        <div class="text-sm text-slate-500 mt-1">Sensors · APIs · Dashboards · Validation</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About -->
+            <section id="about" class="border-y border-white/[.06] bg-white/[.015]">
+                <div class="max-w-7xl mx-auto px-5 sm:px-8 py-16">
+                    <div class="grid lg:grid-cols-12 gap-12">
+                        <div class="lg:col-span-4">
+                            <div class="mono text-xs text-emerald-300 mb-4">02 // PROFILE</div>
+                            <h2 class="text-3xl sm:text-4xl font-bold">Engineering with a system view.</h2>
+                        </div>
+                        <div class="lg:col-span-8 text-slate-300 leading-8">
+                            <p>
+                                I am an Electrical Engineering graduate with a concentration in Control Electronics.
+                                My project experience spans embedded firmware, sensor integration, wireless telemetry,
+                                industrial communication, automation, and real-time monitoring.
+                            </p>
+                            <p class="mt-5">
+                                I enjoy working across the boundary between hardware and software: reading physical
+                                signals, designing firmware logic, connecting devices through industrial protocols,
+                                and turning measurements into useful information through APIs and dashboards.
+                            </p>
+                            <p class="mt-5 text-slate-500">
+                                My portfolio reflects hands-on engineering work rather than a single software stack.
+                                The common thread is practical system integration, debugging, measurement, and
+                                making embedded systems behave predictably.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Capabilities -->
+            <section id="capabilities" class="max-w-7xl mx-auto px-5 sm:px-8 py-16">
+                <div class="mono text-xs text-emerald-300 mb-4">03 // CAPABILITIES</div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="glass rounded-xl p-6">
+                        <i class="fa-solid fa-microchip text-emerald-300 text-xl"></i>
+                        <h3 class="font-semibold mt-5">Embedded Systems</h3>
+                        <p class="text-sm text-slate-500 mt-2 leading-6">ESP32, STM32/APM32, ESP-IDF, Arduino, FreeRTOS, sensor and peripheral integration.</p>
+                    </div>
+                    <div class="glass rounded-xl p-6">
+                        <i class="fa-solid fa-tower-broadcast text-blue-300 text-xl"></i>
+                        <h3 class="font-semibold mt-5">Industrial Communication</h3>
+                        <p class="text-sm text-slate-500 mt-2 leading-6">Modbus RTU/TCP, RS485, MQTT, UART, CAN, LoRa, Wi-Fi and device telemetry.</p>
+                    </div>
+                    <div class="glass rounded-xl p-6">
+                        <i class="fa-solid fa-wave-square text-violet-300 text-xl"></i>
+                        <h3 class="font-semibold mt-5">Control & Signal Processing</h3>
+                        <p class="text-sm text-slate-500 mt-2 leading-6">Filtering, PID control, IMU processing, telemetry algorithms and real-time data handling.</p>
+                    </div>
+                    <div class="glass rounded-xl p-6">
+                        <i class="fa-solid fa-chart-line text-amber-300 text-xl"></i>
+                        <h3 class="font-semibold mt-5">Monitoring & Data</h3>
+                        <p class="text-sm text-slate-500 mt-2 leading-6">Python, APIs, dashboards, SQLite/PostgreSQL, cloud-connected telemetry and logging.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section id="projects" class="max-w-7xl mx-auto px-5 sm:px-8 py-8 pb-24">
+                <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-5 mb-10">
+                    <div>
+                        <div class="mono text-xs text-emerald-300 mb-4">04 // SELECTED PROJECTS</div>
+                        <h2 class="text-3xl sm:text-4xl font-bold">Engineering projects</h2>
+                        <p class="text-slate-500 mt-3 max-w-2xl">
+                            A collection of embedded, IoT, automation, robotics, telemetry, and monitoring systems.
+                        </p>
+                    </div>
+                    <div class="mono text-xs text-slate-500">
+                        <span id="project-count">11</span> PROJECTS
+                    </div>
+                </div>
+
+                <div id="projects-list" class="grid lg:grid-cols-2 gap-5"></div>
+            </section>
+        </main>
+
+        <footer class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 py-10 flex flex-col sm:flex-row justify-between gap-4 text-xs text-slate-600">
+            <div>© 2026 Aryaguna Abi Rafdi Yasa</div>
+            <div class="mono">Electrical Engineering · Embedded Systems · IoT</div>
+        </footer>
+    </div>
+
+    <script>
+        const projectsData = [
+            {
+                id: "project-1",
+                title: "RAF RTOS-ESP32 — Embedded Firmware Framework",
+                category: "Embedded Systems / FreeRTOS",
+                description: "A modular ESP-IDF firmware framework designed to simplify the development of real-time ESP32 applications. It brings scheduling, communication, data logging, OTA updates, and system observability into a reusable application structure.",
+                features: [
+                    "Descriptor-based FreeRTOS task scheduler for periodic application jobs",
+                    "Centralized communication hub supporting UART, Modbus, LoRa, Wi-Fi, MQTT, CAN and ESP-NOW",
+                    "Binary data logging with ping-pong buffering, CRC-32 validation and recovery handling",
+                    "Browser-based firmware update through an embedded web server"
+                ],
+                tech: ["ESP32", "ESP-IDF 5.x", "FreeRTOS", "C / C++", "Modbus", "MQTT"],
+                github: "https://github.com/rafdi03/RAF_RTOS-ESP32_0.1v"
+            },
+            {
+                id: "project-2",
+                title: "ESP32 Embedded Health Monitoring System",
+                category: "Embedded / Sensor Systems",
+                description: "An ESP32-based monitoring system integrating physiological sensors for heart rate, body temperature and blood oxygen measurements, with signal processing and wireless data transmission.",
+                features: [
+                    "Sensor acquisition and digital filtering for physiological signals",
+                    "ESP32 firmware structured around real-time embedded tasks",
+                    "Wireless telemetry using Wi-Fi and MQTT",
+                    "Designed with low-power operation in mind"
+                ],
+                tech: ["ESP32", "C / C++", "FreeRTOS", "MAX30102", "MQTT", "Grafana"],
+                github: "https://github.com/rafdi03/s3_health_monitor"
+            },
+            {
+                id: "project-3",
+                title: "LoRa Radiation Telemetry & Monitoring System",
+                category: "Wireless Telemetry / IoT",
+                description: "A long-range telemetry system for transmitting radiation measurements and environmental data between field devices and a gateway. The system combines LoRa communication, serial interfaces and a lightweight monitoring backend.",
+                features: [
+                    "LoRa point-to-point communication for remote telemetry",
+                    "Integration with Ludlum 375 radiation measurement equipment",
+                    "Raspberry Pi gateway with serial communication and data processing",
+                    "Local data storage and browser-based monitoring"
+                ],
+                tech: ["LoRa", "Arduino", "Raspberry Pi", "RS485", "Python", "SQLite"],
+                github: "https://github.com/rafdi03/IoT-Radiation-Monitoring-via-LoRa-"
+            },
+            {
+                id: "project-4",
+                title: "IoT Water Pump & Smart Irrigation Controller",
+                category: "Automation / Control",
+                description: "An automated irrigation concept combining soil-moisture sensing, scheduled operation and external weather information to control a water pump while providing manual override capabilities.",
+                features: [
+                    "Automatic pump control based on sensor thresholds",
+                    "Scheduled operation and manual override",
+                    "Web-connected monitoring and control",
+                    "Protection logic for the controlled pump load"
+                ],
+                tech: ["STM32 / ESP8266", "Relay", "Node.js", "Express", "Tailwind CSS"],
+                github: "https://github.com/rafdi03/Ludlum_Monitoring"
+            },
+            {
+                id: "project-5",
+                title: "Scalable Data Pipeline & Python Analytics",
+                category: "Data Engineering",
+                description: "A data-processing architecture for transforming raw event data into structured analytical datasets using Python, dbt and PostgreSQL, with containerized and scheduled processing components.",
+                features: [
+                    "Structured transformation workflows with dbt",
+                    "Automated testing and data documentation",
+                    "Scheduled batch and streaming-oriented processing",
+                    "Pipeline monitoring and error notification concepts"
+                ],
+                tech: ["Python", "dbt", "Apache Airflow", "PostgreSQL", "Docker"],
+                github: "https://github.com/rafdi03"
+            },
+            {
+                id: "project-6",
+                title: "Crabs Aquasense — Smart Pond Monitoring",
+                category: "IoT / Aquaculture",
+                description: "A real-time pond monitoring and control system using ESP32 sensor nodes, MQTT messaging and a Django-based web interface. The system is designed to centralize water-quality data and provide remote relay control.",
+                features: [
+                    "Real-time water parameter monitoring through a web interface",
+                    "ESP32 sensor communication using MQTT",
+                    "Web-based relay control for water management",
+                    "Historical sensor storage and threshold-based classification"
+                ],
+                tech: ["ESP32", "Python", "Django", "WebSockets", "MQTT / EMQX", "SQLite"],
+                github: "https://github.com/rafdi03/Crabs_project"
+            },
+            {
+                id: "project-7",
+                title: "Hybrid Solar & Wind Energy Monitoring",
+                category: "Renewable Energy / Embedded",
+                description: "An ESP32-based monitoring and automatic source-selection system for a hybrid solar and wind power setup. The firmware reads electrical parameters through Modbus RTU and I2C, applies source-selection logic, and publishes telemetry through MQTT.",
+                features: [
+                    "Real-time PV, battery, SOC, energy and wind-turbine monitoring",
+                    "Automatic source selection based on measured power",
+                    "Modbus RTU over RS485 and I2C INA219 integration",
+                    "MQTT JSON telemetry with watchdog protection"
+                ],
+                tech: ["ESP32", "Modbus RTU", "RS485", "INA219", "MQTT", "FreeRTOS"],
+                github: "https://github.com/rafdi03"
+            },
+            {
+                id: "project-8",
+                title: "Automatic Water Filtration for House Pets",
+                category: "IoT / Smart Automation",
+                description: "An ESP32-based automatic drinking-water filtration and monitoring system integrating water level, turbidity and pH-related sensing with relay and solenoid control, plus cloud-connected logging.",
+                features: [
+                    "Automatic water-level monitoring and refill control",
+                    "Turbidity measurement and digital water-quality classification",
+                    "Scheduled filtration and pump-cleaning cycles",
+                    "Blynk dashboard and offline data handling when Wi-Fi is unavailable"
+                ],
+                tech: ["ESP32", "C / C++", "Blynk IoT", "Google Apps Script", "HTTPClient", "Relay"],
+                github: "https://github.com/rafdi03/IoT-Based-Automatic-Water-Filtration-for-House-Pets"
+            },
+            {
+                id: "project-9",
+                title: "ESP32 Robotic Hand & Rehabilitation Glove",
+                category: "Robotics / Control",
+                description: "A five-channel assistive glove prototype using flex sensors and servo motors to reproduce controlled finger movement. The system applies PID control and includes a programmed rehabilitation cycle.",
+                features: [
+                    "Five-channel servo actuation with flex-sensor feedback",
+                    "PID-based control for more stable finger positioning",
+                    "Programmable grip, hold, release and rest sequence",
+                    "Automatic stop protection and wireless session reporting"
+                ],
+                tech: ["ESP32", "C / C++", "PID Control", "Servo", "Flex Sensors", "Telegram Bot"],
+                github: "https://github.com/rafdi03/Hand_Rehabilitations"
+            },
+            {
+                id: "project-10",
+                title: "FaceFinger Lock — Dual Authentication Smart Lock",
+                category: "Computer Vision / Embedded",
+                description: "A smart-lock prototype combining fingerprint verification and face recognition as two authentication stages. The architecture connects embedded hardware, camera capture, Python-based recognition and relay-controlled door actuation.",
+                features: [
+                    "Two-stage fingerprint and face authentication",
+                    "UART communication between embedded devices",
+                    "Python-based face recognition processing",
+                    "Real-time status indication and relay-controlled lock actuation"
+                ],
+                tech: ["Arduino Nano", "ESP32-CAM", "Python", "dlib", "Face Recognition", "UART / Wi-Fi"],
+                github: "https://github.com/rafdi03/FaceFinger_Lock"
+            },
+            {
+                id: "project-11",
+                title: "Hydroponic Nutrient Monitoring System",
+                category: "IoT / Smart Agriculture",
+                description: "An ESP32-based hydroponic monitoring and control system measuring nutrient concentration and water level while controlling pumps and valves. Local status is displayed on an LCD and telemetry can be reported remotely.",
+                features: [
+                    "TDS and ultrasonic water-level monitoring",
+                    "Automatic control of a four-channel relay and 360° servo valve",
+                    "RTC-based timestamping with local LCD status",
+                    "Telegram notifications and Google Sheets logging"
+                ],
+                tech: ["ESP32", "C / C++", "TDS Sensor", "JSN-SR04", "DS3231", "Telegram Bot"],
+                github: "https://github.com/rafdi03/IoT-Based-Hydroponic-Nutrient-Monitoring-System"
+            }
+        ];
+
+        function projectCard(project) {
+            return `
+                <article id="${project.id}" class="project-card glass rounded-2xl p-6">
+                    <div class="mono text-[10px] text-emerald-300 mb-1">PROJECT ${String(project.id.split("-")[1]).padStart(2,"0")}</div>
+                    <h3 class="text-xl font-bold mb-2">${project.title}</h3>
+                    <span class="tag inline-block px-2.5 py-1 rounded-md text-[10px] uppercase font-semibold text-slate-300 mb-4">${project.category}</span>
+                    
+                    <p class="text-sm text-slate-400 leading-6 mb-4">${project.description}</p>
+
+                    <div class="mb-4">
+                        <div class="mono text-[10px] text-slate-500 uppercase mb-2">Key Features</div>
+                        <ul class="space-y-1.5">
+                            ${project.features.map(f => `
+                                <li class="flex gap-2 text-xs text-slate-300">
+                                    <span class="mt-1.5 w-1 h-1 rounded-full bg-emerald-300 flex-shrink-0"></span>
+                                    <span>${f}</span>
+                                </li>
+                            `).join("")}
+                        </ul>
+                    </div>
+
+                    <div class="pt-4 border-t border-white/[.06] flex flex-wrap gap-1.5">
+                        ${project.tech.map(t => `<span class="tag rounded px-2 py-1 text-[10px] text-slate-400">${t}</span>`).join("")}
+                    </div>
+                </article>
+            `;
+        }
+
+        function renderProjects() {
+            document.getElementById("projects-list").innerHTML = projectsData.map(projectCard).join("");
+            document.getElementById("project-count").textContent = projectsData.length;
+        }
+
+        function downloadPDF() {
+            const element = document.getElementById('pdf-container');
+            const opt = {
+                margin:       [10, 10, 10, 10],
+                filename:     'Aryaguna_Portfolio.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2, useCORS: true, allowTaint: true },
+                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            html2pdf().set(opt).from(element).save();
+        }
+
+        renderProjects();
+    </script>
+</body>
+</html>
