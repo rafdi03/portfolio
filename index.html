@@ -138,12 +138,10 @@
                 print-color-adjust: exact !important;
             }
 
-            /* Sembunyikan elemen navigasi dan tombol yang tidak perlu */
             header, .no-print, #marquee-section {
                 display: none !important;
             }
 
-            /* Cegah pemotongan kartu project di tengah halaman */
             .project-card, .glass, section {
                 break-inside: avoid !important;
                 page-break-inside: avoid !important;
@@ -153,7 +151,6 @@
                 display: grid !important;
             }
 
-            /* Penyesuaian layout agar pas di kertas A4 */
             .project-card {
                 margin-bottom: 20px;
                 border: 1px solid rgba(255, 255, 255, 0.15) !important;
@@ -186,7 +183,7 @@
                     GitHub <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-1"></i>
                 </a>
                 <button onclick="window.print()" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-emerald-400/10 border border-emerald-400/30 text-emerald-300 text-xs font-semibold hover:bg-emerald-400/20 transition">
-                    <i class="fa-solid fa-file-pdf"></i> Download PDF Sempurna
+                    <i class="fa-solid fa-file-pdf"></i> Download PDF
                 </button>
             </nav>
 
@@ -221,7 +218,7 @@
 
                 <div class="flex flex-wrap gap-3 mt-8 no-print">
                     <button onclick="window.print()" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-emerald-300 text-slate-950 font-semibold hover:bg-emerald-200 transition">
-                        <i class="fa-solid fa-file-pdf"></i> Download PDF Sempurna
+                        <i class="fa-solid fa-file-pdf"></i> Download PDF
                     </button>
                     <a href="https://github.com/rafdi03" target="_blank" rel="noopener noreferrer"
                        class="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/10 bg-white/[.03] text-slate-200 hover:bg-white/[.07] transition">
@@ -316,7 +313,7 @@
                     </p>
                 </div>
                 <div class="mono text-xs text-slate-500">
-                    <span id="project-count">11</span> PROJECTS
+                    <span id="project-count">5</span> PROJECTS
                 </div>
             </div>
 
@@ -342,10 +339,11 @@
 
     <script>
         const projectsData = [
-                {
+            {
                 id: "project-1",
                 title: "RAF RTOS-ESP32 — Embedded Firmware Framework",
                 category: "Embedded Systems / FreeRTOS",
+                icon: "fa-microchip",
                 description: "A modular ESP-IDF firmware framework designed to simplify the development of real-time ESP32 applications. It brings scheduling, communication, data logging, OTA updates, and system observability into a reusable application structure.",
                 features: [
                     "Descriptor-based FreeRTOS task scheduler for periodic application jobs",
@@ -356,14 +354,14 @@
                 tech: ["ESP32", "ESP-IDF 5.x", "FreeRTOS", "C / C++", "Modbus", "MQTT"],
                 github: "https://github.com/rafdi03/RAF_RTOS-ESP32_0.1v",
                 images: [
-                    ["./RAF_ESP32.jpeg", "Embedded hardware and firmware architecture"],
-                    ["./RAF_ESP32.jpeg", "PCB layout and testing"]
+                    ["./RAF_ESP32.jpeg", "Embedded hardware and firmware architecture"]
                 ]
             },
             {
                 id: "project-2",
                 title: "ESP32 Embedded Health Monitoring System",
                 category: "Embedded / Sensor Systems",
+                icon: "fa-heart-pulse",
                 description: "An ESP32-based monitoring system integrating physiological sensors for heart rate, body temperature and blood oxygen measurements, with signal processing and wireless data transmission.",
                 features: [
                     "Sensor acquisition and digital filtering for physiological signals",
@@ -374,14 +372,14 @@
                 tech: ["ESP32", "C / C++", "FreeRTOS", "MAX30102", "MQTT", "Grafana"],
                 github: "https://github.com/rafdi03/s3_health_monitor",
                 images: [
-                    ["./Monitoring_kesehatan_pcb.jpeg", "Microcontroller and sensor integration"],
-                    ["./Monitoring_kesehatan_pcb.jpeg", "Hardware design and PCB"]
+                    ["./Monitoring_kesehatan_pcb.jpeg", "Microcontroller and sensor integration"]
                 ]
             },
             {
                 id: "project-6",
                 title: "Crabs Aquasense — Smart Pond Monitoring",
                 category: "IoT / Aquaculture",
+                icon: "fa-water",
                 description: "A real-time pond monitoring and control system using ESP32 sensor nodes, MQTT messaging and a Django-based web interface. The system is designed to centralize water-quality data and provide remote relay control.",
                 features: [
                     "Real-time water parameter monitoring through a web interface",
@@ -401,6 +399,7 @@
                 id: "project-7",
                 title: "Hybrid Solar & Wind Energy Monitoring",
                 category: "Renewable Energy / Embedded",
+                icon: "fa-solar-panel",
                 description: "An ESP32-based monitoring and automatic source-selection system for a hybrid solar and wind power setup. The firmware reads electrical parameters through Modbus RTU and I2C, applies source-selection logic, and publishes telemetry through MQTT.",
                 features: [
                     "Real-time PV, battery, SOC, energy and wind-turbine monitoring",
@@ -419,6 +418,7 @@
                 id: "project-11",
                 title: "Hydroponic Nutrient Monitoring System",
                 category: "IoT / Smart Agriculture",
+                icon: "fa-seedling",
                 description: "An ESP32-based hydroponic monitoring and control system measuring nutrient concentration and water level while controlling pumps and valves. Local status is displayed on an LCD and telemetry can be reported remotely.",
                 features: [
                     "TDS and ultrasonic water-level monitoring",
