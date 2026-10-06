@@ -1,1454 +1,930 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang='en' class='scroll-smooth'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aryaguna Abi Rafdi Yasa — Electrical & Embedded Systems Engineer. Comprehensive portfolio featuring work experience, engineering projects, verified certifications, and technical capabilities.">
-    <meta name="theme-color" content="#070a0f">
-    <title>Aryaguna Abi Rafdi Yasa | Electrical & Embedded Systems Engineer Portfolio</title>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta name='description' content='Aryaguna Abi Rafdi Yasa — Electrical & Embedded Systems Engineer. Portfolio covering embedded systems, industrial IoT, telemetry, and engineering projects.'>
+  <meta name='theme-color' content='#070a0f'>
+  <title>Aryaguna Abi Rafdi Yasa | Electrical & Embedded Systems Engineer</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src='https://cdn.tailwindcss.com'></script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css'>
+  <link rel='preconnect' href='https://fonts.googleapis.com'>
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+  <link href='https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700;800;900&display=swap' rel='stylesheet'>
 
-    <style>
-        :root {
-            --bg: #070a0f;
-            --panel: #0d121a;
-            --panel-2: #121a26;
-            --line: rgba(255,255,255,0.08);
-            --muted: #8b98a9;
-            --text: #edf2f7;
-            --accent: #10b981;
-            --accent-glow: #34d399;
-            --accent-2: #38bdf8;
-            --accent-3: #818cf8;
-        }
+  <style>
+    :root {
+      --bg: #070a0f;
+      --panel: #0d121a;
+      --panel-2: #121a26;
+      --line: rgba(255,255,255,.08);
+      --muted: #8b98a9;
+      --text: #edf2f7;
+      --accent: #10b981;
+      --accent-2: #60a5fa;
+      --accent-3: #818cf8;
+    }
 
-        * { box-sizing: border-box; }
+    * { box-sizing: border-box; }
 
-        body {
-            margin: 0;
-            background:
-                radial-gradient(circle at 80% 0%, rgba(56,189,248,0.08), transparent 32rem),
-                radial-gradient(circle at 10% 20%, rgba(16,185,129,0.06), transparent 30rem),
-                radial-gradient(circle at 50% 60%, rgba(129,140,248,0.04), transparent 36rem),
-                var(--bg);
-            color: var(--text);
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-        }
+    html { scroll-behavior: smooth; }
 
-        h1, h2, h3, h4 { letter-spacing: -0.028em; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 80% 0%, rgba(96,165,250,.08), transparent 30rem),
+        radial-gradient(circle at 10% 20%, rgba(16,185,129,.06), transparent 28rem),
+        var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
 
-        .mono { font-family: 'DM Mono', monospace; }
+    h1, h2, h3, h4 { letter-spacing: -.028em; }
+    .mono { font-family: 'DM Mono', monospace; }
 
-        .grid-bg {
-            background-image:
-                linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
-            background-size: 40px 40px;
-            mask-image: linear-gradient(to bottom, black, transparent 85%);
-            -webkit-mask-image: linear-gradient(to bottom, black, transparent 85%);
-        }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: linear-gradient(to bottom, black, transparent 85%);
+      -webkit-mask-image: linear-gradient(to bottom, black, transparent 85%);
+    }
 
-        .glass {
-            background: rgba(13,18,26,0.75);
-            border: 1px solid var(--line);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-        }
+    .glass {
+      background: rgba(13,18,26,.72);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
 
-        .glass-card {
-            background: rgba(16,23,34,0.65);
-            border: 1px solid rgba(255,255,255,0.07);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+    .glass-card {
+      background: rgba(16,23,34,.7);
+      border: 1px solid rgba(255,255,255,.07);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: all .3s cubic-bezier(.16,1,.3,1);
+    }
 
-        .glass-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(52,211,153,0.3);
-            box-shadow: 0 20px 40px -15px rgba(0,0,0,0.5), 0 0 25px -5px rgba(52,211,153,0.12);
-        }
+    .glass-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(52,211,153,.3);
+      box-shadow: 0 20px 40px -15px rgba(0,0,0,.5), 0 0 25px -5px rgba(52,211,153,.12);
+    }
 
-        .tag {
-            border: 1px solid rgba(255,255,255,0.08);
-            background: rgba(255,255,255,0.035);
-        }
+    .tag {
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.035);
+    }
 
-        .tag-accent {
-            border: 1px solid rgba(52,211,153,0.25);
-            background: rgba(52,211,153,0.08);
-            color: #6ee7b7;
-        }
+    .tag-accent {
+      border: 1px solid rgba(52,211,153,.25);
+      background: rgba(52,211,153,.08);
+      color: #6ee7b7;
+    }
 
-        .accent-line {
-            background: linear-gradient(90deg, #34d399, #38bdf8, transparent);
-        }
+    .accent-line {
+      background: linear-gradient(90deg, #34d399, #38bdf8, transparent);
+    }
 
-        .timeline-line {
-            position: absolute;
-            top: 24px;
-            bottom: 24px;
-            left: 19px;
-            width: 2px;
-            background: linear-gradient(to bottom, rgba(52,211,153,0.4), rgba(56,189,248,0.2) 80%, transparent);
-        }
+    .fade-up {
+      animation: fadeUp .75s cubic-bezier(.16,1,.3,1) both;
+    }
 
-        .fade-up {
-            animation: fadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
-        }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(18px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    .marquee-track {
+      width: max-content;
+      animation: marquee 45s linear infinite;
+    }
 
-        .marquee-track {
-            width: max-content;
-            animation: marquee 45s linear infinite;
-        }
+    .marquee-track:hover { animation-play-state: paused; }
 
-        .marquee-track:hover { animation-play-state: paused; }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
 
-        @keyframes marquee {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
-        }
+    .highlight {
+      animation: highlight 1.8s ease;
+    }
 
-        .highlight {
-            animation: highlight 1.8s ease;
-        }
+    @keyframes highlight {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(52,211,153,0); }
+      35% { box-shadow: 0 0 0 4px rgba(52,211,153,.25), 0 15px 50px rgba(52,211,153,.15); }
+    }
 
-        @keyframes highlight {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(52,211,153,0); }
-            35% { box-shadow: 0 0 0 4px rgba(52,211,153,0.25), 0 15px 50px rgba(52,211,153,0.15); }
-        }
+    .tab-btn.active {
+      background: rgba(52,211,153,.14);
+      border-color: rgba(52,211,153,.4);
+      color: #6ee7b7;
+    }
 
-        ::selection { background: rgba(52,211,153,0.3); color: white; }
+    .modal-overlay {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .25s ease, visibility .25s ease;
+    }
 
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--bg); }
-        ::-webkit-scrollbar-thumb { background: #263345; border-radius: 999px; }
-        ::-webkit-scrollbar-thumb:hover { background: #3b4d66; }
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
 
-        /* Modal styling */
-        .modal-overlay {
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.25s ease, visibility 0.25s ease;
-        }
-        .modal-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        .modal-content {
-            transform: scale(0.95);
-            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .modal-overlay.active .modal-content {
-            transform: scale(1);
-        }
+    .modal-content {
+      transform: scale(.95);
+      transition: transform .25s cubic-bezier(.16,1,.3,1);
+    }
 
-        /* Filter active tab indicator */
-        .tab-btn.active {
-            background: rgba(52,211,153,0.14);
-            border-color: rgba(52,211,153,0.4);
-            color: #6ee7b7;
-        }
+    .modal-overlay.active .modal-content {
+      transform: scale(1);
+    }
 
-        /* Print optimizations */
-        @media print {
-            @page {
-                size: A4 portrait;
-                margin: 10mm;
-            }
-            body {
-                background: #070a0f !important;
-                color: #edf2f7 !important;
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-            }
-            header, .no-print, #marquee-section, .modal-overlay, #contact-cta {
-                display: none !important;
-            }
-            .glass-card, .glass, section {
-                break-inside: avoid !important;
-                page-break-inside: avoid !important;
-            }
-            .grid {
-                display: grid !important;
-            }
-        }
-    </style>
+    ::selection { background: rgba(52,211,153,.3); color: white; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: #263345; border-radius: 999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #3b4d66; }
+
+    @media print {
+      @page { size: A4 portrait; margin: 12mm; }
+      body {
+        background: #070a0f !important;
+        color: #edf2f7 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      header, .no-print, #marquee-section, .modal-overlay, #contact-cta { display: none !important; }
+      .glass-card, .glass, section { break-inside: avoid !important; page-break-inside: avoid !important; }
+      .grid { display: grid !important; }
+      a { text-decoration: none !important; }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="fixed inset-0 pointer-events-none grid-bg"></div>
+  <div class='fixed inset-0 pointer-events-none grid-bg'></div>
 
-    <!-- Navigation Bar -->
-    <header class="sticky top-0 z-40 border-b border-white/[.06] bg-[#070a0f]/85 backdrop-blur-xl no-print">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="#top" class="flex items-center gap-3 group">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.8)] animate-pulse"></span>
-                <span class="font-bold tracking-tight text-sm sm:text-base">ARYAGUNA<span class="text-slate-500 font-normal"> / </span><span class="text-emerald-300 font-mono text-xs sm:text-sm">ENGINEERING</span></span>
-            </a>
+  <header class='sticky top-0 z-40 border-b border-white/[.06] bg-[#070a0f]/85 backdrop-blur-xl no-print'>
+    <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between'>
+      <a href='#top' class='flex items-center gap-3 group'>
+        <span class='w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.8)] animate-pulse'></span>
+        <span class='font-bold tracking-tight text-sm sm:text-base'>ARYAGUNA<span class='text-slate-500 font-normal'> / </span><span class='text-emerald-300 font-mono text-xs sm:text-sm'>ENGINEERING</span></span>
+      </a>
 
-            <nav class="hidden md:flex items-center gap-6 text-xs sm:text-sm text-slate-400 font-medium">
-                <a href="#about" class="hover:text-white transition">About</a>
-                <a href="#experience" class="hover:text-white transition">Experience</a>
-                <a href="#projects" class="hover:text-white transition">Projects</a>
-                <a href="#certificates" class="hover:text-white transition">Certificates</a>
-                <a href="#skills" class="hover:text-white transition">Skills</a>
-                <a href="#education" class="hover:text-white transition">Education</a>
-                <a href="https://github.com/rafdi03" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-emerald-300 transition flex items-center gap-1">
-                    <i class="fa-brands fa-github"></i> GitHub
-                </a>
-                <button onclick="window.print()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-400/10 border border-emerald-400/30 text-emerald-300 text-xs font-semibold hover:bg-emerald-400/20 transition">
-                    <i class="fa-solid fa-file-pdf"></i> CV / Print
-                </button>
-            </nav>
+      <nav class='hidden md:flex items-center gap-6 text-xs sm:text-sm text-slate-400 font-medium'>
+        <a href='#about' class='hover:text-white transition'>About</a>
+        <a href='#experience' class='hover:text-white transition'>Experience</a>
+        <a href='#projects' class='hover:text-white transition'>Projects</a>
+        <a href='#certificates' class='hover:text-white transition'>Certificates</a>
+        <a href='#skills' class='hover:text-white transition'>Skills</a>
+        <a href='#education' class='hover:text-white transition'>Education</a>
+        <a href='https://github.com/rafdi03' target='_blank' rel='noopener noreferrer' class='text-slate-300 hover:text-emerald-300 transition flex items-center gap-1'>
+          <i class='fa-brands fa-github'></i> GitHub
+        </a>
+        <a href='https://drive.google.com/drive/folders/1OfDBXPVV9OFVni2r-vCW1Owt11a2FKQ5?usp=sharing' target='_blank' rel='noopener noreferrer' class='inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-400/10 border border-emerald-400/30 text-emerald-300 text-xs font-semibold hover:bg-emerald-400/20 transition'>
+          <i class='fa-solid fa-file-pdf'></i> Download CV
+        </a>
+      </nav>
 
-            <div class="md:hidden flex items-center gap-3">
-                <button onclick="window.print()" class="p-2 rounded-lg bg-emerald-400/10 border border-emerald-400/30 text-emerald-300 text-xs">
-                    <i class="fa-solid fa-file-pdf"></i>
-                </button>
-                <button id="mobile-menu-btn" class="p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle menu">
-                    <i class="fa-solid fa-bars text-lg"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden md:hidden border-b border-white/[.06] bg-[#0d121a]/95 px-6 py-4 space-y-3 text-sm text-slate-300">
-            <a href="#about" class="block hover:text-emerald-300 py-1">About</a>
-            <a href="#experience" class="block hover:text-emerald-300 py-1">Experience</a>
-            <a href="#projects" class="block hover:text-emerald-300 py-1">Projects</a>
-            <a href="#certificates" class="block hover:text-emerald-300 py-1">Certificates</a>
-            <a href="#skills" class="block hover:text-emerald-300 py-1">Skills</a>
-            <a href="#education" class="block hover:text-emerald-300 py-1">Education</a>
-            <div class="pt-2 border-t border-white/[.06] flex items-center justify-between">
-                <a href="https://github.com/rafdi03" target="_blank" rel="noopener noreferrer" class="text-emerald-300 flex items-center gap-1.5">
-                    <i class="fa-brands fa-github"></i> github.com/rafdi03
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <main id="top" class="relative z-10">
-        <!-- Hero Section -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-16 pb-16">
-            <div class="max-w-5xl fade-up">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-400/10 border border-emerald-400/20 text-emerald-300 mono text-xs mb-6">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    <span>ELECTRICAL & EMBEDDED SYSTEMS ENGINEER · IOT · FIRMWARE</span>
-                </div>
-
-                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight">
-                    Aryaguna Abi<br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-sky-300 to-indigo-300">Rafdi Yasa.</span>
-                </h1>
-
-                <div class="accent-line h-px w-32 my-6"></div>
-
-                <p class="max-w-3xl text-base sm:text-xl leading-relaxed text-slate-300">
-                    Electrical Engineering graduate with hands-on experience in <span class="text-white font-medium">engineering projects, industrial systems, embedded firmware, troubleshooting</span>, and cross-functional coordination. Specializing in bridging sensor-level hardware to reliable industrial communication and intelligent IoT telemetry.
-                </p>
-
-                <!-- Quick Contact and Links -->
-                <div class="flex flex-wrap items-center gap-3 sm:gap-4 mt-8 text-xs sm:text-sm text-slate-400">
-                    <a href="mailto:aryagunaabirafdiyasa@gmail.com" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md tag hover:border-emerald-400/40 hover:text-slate-200 transition">
-                        <i class="fa-solid fa-envelope text-emerald-400"></i> aryagunaabirafdiyasa@gmail.com
-                    </a>
-                    <a href="tel:+6288212206614" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md tag hover:border-emerald-400/40 hover:text-slate-200 transition">
-                        <i class="fa-solid fa-phone text-sky-400"></i> +62 882-1220-6614
-                    </a>
-                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md tag">
-                        <i class="fa-solid fa-location-dot text-rose-400"></i> Kabupaten Bogor, Indonesia
-                    </span>
-                </div>
-
-                <div class="flex flex-wrap gap-3.5 mt-8 no-print">
-                    <a href="#projects" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-emerald-400 text-slate-950 font-bold hover:bg-emerald-300 transition shadow-[0_0_20px_rgba(52,211,153,0.3)]">
-                        <i class="fa-solid fa-layer-group"></i> Explore Projects
-                    </a>
-                    <a href="#certificates" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/10 bg-white/[.04] text-slate-200 font-semibold hover:bg-white/[.08] transition">
-                        <i class="fa-solid fa-award text-amber-400"></i> Verified Credentials
-                    </a>
-                    <a href="https://linkedin.com/in/aryaguna-abi-rafdi-yasa" target="_blank" rel="noopener noreferrer"
-                       class="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-sky-500/20 bg-sky-500/10 text-sky-300 font-semibold hover:bg-sky-500/20 transition">
-                        <i class="fa-brands fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/rafdi03" target="_blank" rel="noopener noreferrer"
-                       class="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/10 bg-white/[.03] text-slate-300 font-semibold hover:bg-white/[.07] transition">
-                        <i class="fa-brands fa-github"></i> GitHub
-                    </a>
-                </div>
-            </div>
-
-            <!-- Key Metric Cards -->
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-16">
-                <div class="glass-card rounded-xl p-5 border-l-2 border-l-emerald-400">
-                    <div class="mono text-[11px] text-slate-500 uppercase">Specialization</div>
-                    <div class="text-lg font-bold text-white mt-1">Embedded & Firmware</div>
-                    <div class="text-xs text-slate-400 mt-1">ESP32 · STM32/APM32 · FreeRTOS · C/C++</div>
-                </div>
-                <div class="glass-card rounded-xl p-5 border-l-2 border-l-sky-400">
-                    <div class="mono text-[11px] text-slate-500 uppercase">Industrial Systems</div>
-                    <div class="text-lg font-bold text-white mt-1">Telemetry & Protocols</div>
-                    <div class="text-xs text-slate-400 mt-1">Modbus RTU/TCP · RS485 · LoRa · MQTT</div>
-                </div>
-                <div class="glass-card rounded-xl p-5 border-l-2 border-l-indigo-400">
-                    <div class="mono text-[11px] text-slate-500 uppercase">AI & Data Analytics</div>
-                    <div class="text-lg font-bold text-white mt-1">Edge ML & Analytics</div>
-                    <div class="text-xs text-slate-400 mt-1">TensorFlow Lite · Python · SQL · ESP32-CAM</div>
-                </div>
-                <div class="glass-card rounded-xl p-5 border-l-2 border-l-amber-400">
-                    <div class="mono text-[11px] text-slate-500 uppercase">Academic Background</div>
-                    <div class="text-lg font-bold text-white mt-1">S.T. Teknik Elektro</div>
-                    <div class="text-xs text-slate-400 mt-1">UPN Veteran Jakarta (GPA 3.62 / 4.00)</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About & Core Profile Section -->
-        <section id="about" class="border-y border-white/[.06] bg-white/[.015]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <div class="grid lg:grid-cols-12 gap-10">
-                    <div class="lg:col-span-4">
-                        <div class="mono text-xs text-emerald-400 mb-2">01 // PROFILE & BACKGROUND</div>
-                        <h2 class="text-3xl sm:text-4xl font-bold">Bridging Hardware, Firmware, and Data.</h2>
-                        <div class="mt-6 p-4 rounded-xl glass border border-white/[.08]">
-                            <div class="text-xs text-slate-400 space-y-2">
-                                <div class="flex items-center justify-between"><span class="text-slate-500">Degree:</span> <span class="font-medium text-slate-200">B.Eng in Electrical Engineering</span></div>
-                                <div class="flex items-center justify-between"><span class="text-slate-500">GPA:</span> <span class="font-bold text-emerald-300">3.62 / 4.00</span></div>
-                                <div class="flex items-center justify-between"><span class="text-slate-500">Focus:</span> <span class="text-slate-200">Control & Embedded Systems</span></div>
-                                <div class="flex items-center justify-between"><span class="text-slate-500">Availability:</span> <span class="text-emerald-400 font-semibold flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400"></span> Open for Opportunities</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:col-span-8 text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
-                        <p>
-                            I am an <span class="text-white font-medium">Electrical Engineering graduate</span> with hands-on experience in engineering projects, industrial systems, troubleshooting, and cross-functional coordination. My core work encompasses designing reliable embedded firmware, PCB layout and circuit prototyping, industrial communication protocols, and edge intelligence.
-                        </p>
-                        <p>
-                            Through real-world tenures at <span class="text-emerald-300 font-semibold">Bintang Racing Team</span>, <span class="text-sky-300 font-semibold">BRIN RI (Badan Riset dan Inovasi Nasional)</span>, <span class="text-indigo-300 font-semibold">Cratinovated</span>, and <span class="text-amber-300 font-semibold">Braincore.id</span>, I have led and supported end-to-end engineering lifecycles: from physical packaging constraints, schematic design in KiCad, and sensor calibration, to FreeRTOS multithreading, long-range LoRa P2P telemetry, and cloud dashboard integration.
-                        </p>
-                        <p class="text-slate-400">
-                            I am passionate about operational excellence, technical documentation, root-cause failure analysis, and turning complex sensor data into actionable insights for production, automation, and smart systems.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Work Experience Section -->
-        <section id="experience" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
-                <div>
-                    <div class="mono text-xs text-emerald-400 mb-2">02 // WORK & INTERNSHIP EXPERIENCE</div>
-                    <h2 class="text-3xl sm:text-4xl font-bold">Professional Experience</h2>
-                    <p class="text-slate-400 mt-2 max-w-2xl text-sm sm:text-base">
-                        Track record in R&D engineering, national research institutions, industrial automation, and software QA.
-                    </p>
-                </div>
-                <div class="mono text-xs text-slate-500">
-                    <span>6 ROLES COMPLETED / ONGOING</span>
-                </div>
-            </div>
-
-            <!-- Experience Timeline -->
-            <div class="relative space-y-6">
-                <!-- BRT -->
-                <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/[.08]">
-                    <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center text-xl flex-shrink-0">
-                                <i class="fa-solid fa-car-burst"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-white">RnD Electrical Engineer</h3>
-                                <div class="text-emerald-400 font-medium text-sm mt-0.5">Bintang Racing Team (BRT)</div>
-                            </div>
-                        </div>
-                        <div class="mono text-xs text-slate-400 px-3 py-1 rounded-full bg-white/[.04] border border-white/[.06] w-fit">
-                            Apr 2026 – Sept 2026
-                        </div>
-                    </div>
-                    <ul class="mt-6 space-y-3 text-sm text-slate-300">
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                            <span><strong>Cross-Divisional Coordination:</strong> Coordinated with Mechanical, Production, and Warehouse teams to verify physical packaging constraints, component fitment, and assembly practicality before test runs.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                            <span><strong>Production Schedule Alignment:</strong> Supported project timeline alignment by tracking R&D test iterations alongside production batch schedules to prevent bottlenecks and avoid assembly line delays.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                            <span><strong>Management & Engineering Updates:</strong> Assisted in compiling regular progress updates and test result evaluations for engineering managers, helping flag technical roadblocks early.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                            <span><strong>Field Troubleshooting & Root-Cause Analysis:</strong> Investigated sensor noise and data anomalies during vehicle testing, contributing to practical hardware and firmware adjustments to improve system reliability under high vibration.</span>
-                        </li>
-                    </ul>
-                    <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-white/[.06]">
-                        <span class="tag px-2.5 py-1 rounded text-[11px] text-slate-300">Hardware Packaging</span>
-                        <span class="tag px-2.5 py-1 rounded text-[11px] text-slate-300">Sensor Noise Filtering</span>
-                        <span class="tag px-2.5 py-1 rounded text-[11px] text-slate-300">Cross-team Coordination</span>
-                        <span class="tag px-2.5 py-1 rounded text-[11px] text-slate-300">Root-Cause Analysis</span>
-                    </div>
-                </div>
-
-                <!-- BRIN RI -->
-                <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/[.08]">
-                    <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center text-xl flex-shrink-0">
-                                <i class="fa-solid fa-atom"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-white">Research Intern – Nuclear / Industrial Telemetry</h3>
-                                <div class="text-sky-300 font-medium text-sm mt-0.5">Badan Riset dan Inovasi Nasional RI (BRIN RI)</div>
-                            </div>
-                        </div>
-                        <div class="mono text-xs text-slate-400 px-3 py-1 rounded-full bg-white/[.04] border border-white/[.06] w-fit">
-                            June 2024 – August 2024
-                        </div>
-                    </div>
-                    <ul class="mt-6 space-y-3 text-sm text-slate-300">
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-sky-400 flex-shrink-0"></span>
-                            <span><strong>Industrial Telemetry Implementation:</strong> Set up and validated industrial field telemetry networks utilizing RS485, Modbus, and LoRa protocols for automated radiation monitoring.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-sky-400 flex-shrink-0"></span>
-                            <span><strong>Predictive Lifespan Analysis:</strong> Analyzed historical capacitor bank stress data using decision tree predictive modelling to forecast component degradation and optimize maintenance cycles.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-sky-400 flex-shrink-0"></span>
-                            <span><strong>Automation & Process Control:</strong> Configured Omron PLC ladder logic and data validation rules to automate sensor calibration checks and eliminate measurement drift.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-sky-400 flex-shrink-0"></span>
-                            <span><strong>Research Compliance & Reporting:</strong> Authored formal engineering reports, experimental validation records, and standard testing methodologies complying with national research standards.</span>
-                        </li>
-                    </ul>
-                    <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-white/[.06]">
-                        <span class="tag px-2.5 py-1 rounded text-[11px] text-slate-300">RS485 & Modbus</span>
-                        <span class="tag px-2.5 py-1 rounded text-[11px] text-slate-300">LoRa Telemetry</span>
-                        <span class="tag px-2.5 py-1 rounded text-[11px] text-slate-300">Omron PLC</span>
-                        <span class="tag px-2.5 py-1 rounded text-[11px] text-slate-300">Predictive Modeling</span>
-                        <span class="tag px-2.5 py-1 rounded text-[11px] text-slate-300">Radiation Monitoring</span>
-                    </div>
-                </div>
-
-                <!-- Cratinovated -->
-                <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/[.08]">
-                    <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl flex-shrink-0">
-                                <i class="fa-solid fa-microchip"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-white">IoT Engineer (Freelance Team Project)</h3>
-                                <div class="text-emerald-300 font-medium text-sm mt-0.5">Cratinovated</div>
-                            </div>
-                        </div>
-                        <div class="mono text-xs text-slate-400 px-3 py-1 rounded-full bg-white/[.04] border border-white/[.06] w-fit">
-                            Jun 2025 – Present
-                        </div>
-                    </div>
-                    <ul class="mt-6 space-y-3 text-sm text-slate-300">
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                            <span><strong>Team Coordination & Client Management:</strong> Coordinated a 4-person multidisciplinary team to distribute tasks and track milestones, communicating directly with MSME (UMKM) clients to translate operational needs into practical project requirements.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                            <span><strong>Hardware Assembly & System Integration:</strong> Executed end-to-end prototyping, soldering, and packaging of custom ESP32 and PCB systems, integrating sensor inputs with wireless communication protocols (MQTT, ESP-NOW, LoRa) for stable device-to-platform connectivity.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                            <span><strong>Testing, QA & Handover:</strong> Performed bench calibration and real-world system testing prior to deployment, delivering comprehensive operational handovers, wiring schematics, and Bill of Materials (BOM) to support easy client maintenance.</span>
-                        </li>
-                    </ul>
-                    <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-white/[.06]">
-                        <span class="tag px-2.5 py-1 rounded text-[11px] text-slate-300">PCB Prototyping</span>
-                        <span class="tag px-2.5 py-1 rounded text-[11px] text-slate-300">ESP32 Firmware</span>
-                        <span class="tag px-2.5 py-1 rounded text-[11px] text-slate-300">MQTT & ESP-NOW</span>
-                        <span class="tag px-2.5 py-1 rounded text-[11px] text-slate-300">BOM & Documentation</span>
-                    </div>
-                </div>
-
-                <!-- Braincore.id -->
-                <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/[.08]">
-                    <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl flex-shrink-0">
-                                <i class="fa-solid fa-brain"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-white">Machine Learning Internship</h3>
-                                <div class="text-indigo-300 font-medium text-sm mt-0.5">Braincore.id</div>
-                            </div>
-                        </div>
-                        <div class="mono text-xs text-slate-400 px-3 py-1 rounded-full bg-white/[.04] border border-white/[.06] w-fit">
-                            January 2024 – March 2024
-                        </div>
-                    </div>
-                    <ul class="mt-6 space-y-3 text-sm text-slate-300">
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0"></span>
-                            <span><strong>Workflow Optimization:</strong> Analyzed data flow architecture and system logic to eliminate operational lag in data transactions.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0"></span>
-                            <span><strong>Collaborative QA Testing:</strong> Partnered with software engineers to design structured validation protocols, identifying edge cases and system bugs prior to release.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0"></span>
-                            <span><strong>Clear Technical Handover:</strong> Documented system architecture and workflow logic to ensure smooth team onboarding and operational handovers.</span>
-                        </li>
-                    </ul>
-                    <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-white/[.06]">
-                        <span class="tag px-2.5 py-1 rounded text-[11px] text-slate-300">Machine Learning</span>
-                        <span class="tag px-2.5 py-1 rounded text-[11px] text-slate-300">Data Flow Optimization</span>
-                        <span class="tag px-2.5 py-1 rounded text-[11px] text-slate-300">Structured QA Testing</span>
-                    </div>
-                </div>
-
-                <!-- PT Phincon & Lab Assistant Grid -->
-                <div class="grid md:grid-cols-2 gap-6">
-                    <!-- PT Phincon -->
-                    <div class="glass-card rounded-2xl p-6 border border-white/[.08]">
-                        <div class="flex items-start justify-between gap-3">
-                            <div>
-                                <h3 class="text-lg font-bold text-white">System Administration Engineer</h3>
-                                <div class="text-amber-300 font-medium text-xs mt-0.5">Trainee PT Phincon</div>
-                            </div>
-                            <span class="mono text-[11px] text-slate-400 px-2.5 py-0.5 rounded-full bg-white/[.04]">Oct 2025 – Jan 2026</span>
-                        </div>
-                        <ul class="mt-4 space-y-2.5 text-xs text-slate-300">
-                            <li class="flex items-start gap-2">
-                                <span class="mt-1 w-1.5 h-1.5 rounded-full bg-amber-400 flex-shrink-0"></span>
-                                <span><strong>Incident Troubleshooting:</strong> Identified and resolved critical network/server bottlenecks under tight SLAs for 24/7 availability.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="mt-1 w-1.5 h-1.5 rounded-full bg-amber-400 flex-shrink-0"></span>
-                                <span><strong>Risk Mitigation:</strong> Implemented failover workflows and system contingency measures across enterprise communication platforms.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="mt-1 w-1.5 h-1.5 rounded-full bg-amber-400 flex-shrink-0"></span>
-                                <span><strong>Post-Incident Reporting:</strong> Communicated system health status and root-cause analysis to technical supervisors.</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Lab Assistant -->
-                    <div class="glass-card rounded-2xl p-6 border border-white/[.08]">
-                        <div class="flex items-start justify-between gap-3">
-                            <div>
-                                <h3 class="text-lg font-bold text-white">Data & Algorithm Lab Assistant</h3>
-                                <div class="text-emerald-300 font-medium text-xs mt-0.5">UPN Veteran Jakarta</div>
-                            </div>
-                            <span class="mono text-[11px] text-slate-400 px-2.5 py-0.5 rounded-full bg-white/[.04]">March 2024 – May 2024</span>
-                        </div>
-                        <ul class="mt-4 space-y-2.5 text-xs text-slate-300">
-                            <li class="flex items-start gap-2">
-                                <span class="mt-1 w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                                <span><strong>Mentorship:</strong> Guided 50+ students in structured analytical thinking, systematic debugging methods, and algorithm implementation.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="mt-1 w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                                <span><strong>Evaluation & Feedback:</strong> Evaluated code submissions, provided constructive feedback on logical problem-solving, and assisted laboratory sessions.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Organization & Leadership Section -->
-                <div class="mt-10 pt-8 border-t border-white/[.06]">
-                    <div class="mono text-xs text-sky-400 mb-4">ORGANIZATIONAL LEADERSHIP & VOLUNTEERING</div>
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="glass-card rounded-xl p-5">
-                            <div class="flex items-center justify-between">
-                                <h4 class="font-bold text-white">Information Media Chairman</h4>
-                                <span class="mono text-[10px] text-slate-400">March 2023 – Feb 2025</span>
-                            </div>
-                            <div class="text-xs text-emerald-300 font-medium mt-0.5">IoT Student Study Group (KSM IoT)</div>
-                            <p class="text-xs text-slate-400 mt-3 leading-relaxed">
-                                Formulated organizational strategy, directed division members to execute major events including industry workshops, and spearheaded digital campaigns increasing student engagement.
-                            </p>
-                        </div>
-                        <div class="glass-card rounded-xl p-5">
-                            <div class="flex items-center justify-between">
-                                <h4 class="font-bold text-white">Project Manager (Volunteer)</h4>
-                                <span class="mono text-[10px] text-slate-400">Jan 2026 – March 2026</span>
-                            </div>
-                            <div class="text-xs text-sky-300 font-medium mt-0.5">Ariwala Social Impact Initiative</div>
-                            <p class="text-xs text-slate-400 mt-3 leading-relaxed">
-                                Led full lifecycle management of social impact and donation initiatives, overseeing budget allocation, stakeholder coordination with partner organizations, and ground logistics.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/[.06]">
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-8">
-                <div>
-                    <div class="mono text-xs text-emerald-400 mb-2">03 // SELECTED ENGINEERING PROJECTS</div>
-                    <h2 class="text-3xl sm:text-4xl font-bold">Featured Projects</h2>
-                    <p class="text-slate-400 mt-2 max-w-2xl text-sm sm:text-base">
-                        A curated collection of embedded systems, Edge AI, wireless telemetry, renewable monitoring, and firmware frameworks.
-                    </p>
-                </div>
-                <!-- Project Filter Buttons -->
-                <div class="flex flex-wrap gap-2 text-xs no-print">
-                    <button onclick="filterProjects('all')" class="tab-btn project-filter-btn active px-3 py-1.5 rounded-lg border border-white/10 bg-white/[.04] text-slate-300 font-medium transition">All Projects</button>
-                    <button onclick="filterProjects('embedded')" class="tab-btn project-filter-btn px-3 py-1.5 rounded-lg border border-white/10 bg-white/[.04] text-slate-300 font-medium transition">Embedded & RTOS</button>
-                    <button onclick="filterProjects('iot')" class="tab-btn project-filter-btn px-3 py-1.5 rounded-lg border border-white/10 bg-white/[.04] text-slate-300 font-medium transition">IoT & Telemetry</button>
-                    <button onclick="filterProjects('ai')" class="tab-btn project-filter-btn px-3 py-1.5 rounded-lg border border-white/10 bg-white/[.04] text-slate-300 font-medium transition">Edge AI & ML</button>
-                </div>
-            </div>
-
-            <!-- Projects Grid -->
-            <div id="projects-grid" class="grid lg:grid-cols-2 gap-6"></div>
-        </section>
-
-        <!-- Project marquee ticker -->
-        <section id="marquee-section" class="border-y border-white/[.06] overflow-hidden bg-[#090e16] no-print">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center gap-4">
-                <span class="mono text-[10px] text-emerald-400 font-bold whitespace-nowrap flex items-center gap-1.5">
-                    <i class="fa-solid fa-bolt"></i> QUICK PROJECT INDEX
-                </span>
-                <div class="h-px bg-white/[.08] flex-1"></div>
-            </div>
-            <div class="overflow-hidden pb-6">
-                <div id="marquee" class="marquee-track flex gap-3"></div>
-            </div>
-        </section>
-
-        <!-- Verified Certificates Section -->
-        <section id="certificates" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-8">
-                <div>
-                    <div class="mono text-xs text-amber-400 mb-2">04 // VERIFIED CREDENTIALS & CERTIFICATIONS</div>
-                    <h2 class="text-3xl sm:text-4xl font-bold">Certificates & Licenses</h2>
-                    <p class="text-slate-400 mt-2 max-w-2xl text-sm sm:text-base">
-                        Recognized professional certifications spanning Machine Learning, Data Analytics, PCB Design, Robotics, and Language Proficiency.
-                    </p>
-                </div>
-                <!-- Certificate Filter Buttons -->
-                <div class="flex flex-wrap gap-2 text-xs no-print">
-                    <button onclick="filterCerts('all')" class="tab-btn cert-filter-btn active px-3 py-1.5 rounded-lg border border-white/10 bg-white/[.04] text-slate-300 font-medium transition">All Certificates</button>
-                    <button onclick="filterCerts('ai-ml')" class="tab-btn cert-filter-btn px-3 py-1.5 rounded-lg border border-white/10 bg-white/[.04] text-slate-300 font-medium transition">AI & Machine Learning</button>
-                    <button onclick="filterCerts('data')" class="tab-btn cert-filter-btn px-3 py-1.5 rounded-lg border border-white/10 bg-white/[.04] text-slate-300 font-medium transition">Data Analytics & SQL</button>
-                    <button onclick="filterCerts('engineering')" class="tab-btn cert-filter-btn px-3 py-1.5 rounded-lg border border-white/10 bg-white/[.04] text-slate-300 font-medium transition">Engineering & Hardware</button>
-                    <button onclick="filterCerts('softskill')" class="tab-btn cert-filter-btn px-3 py-1.5 rounded-lg border border-white/10 bg-white/[.04] text-slate-300 font-medium transition">Language & Skills</button>
-                </div>
-            </div>
-
-            <!-- Certificates Grid -->
-            <div id="certificates-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
-        </section>
-
-        <!-- Technical Skills & Capabilities -->
-        <section id="skills" class="border-y border-white/[.06] bg-white/[.015]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <div class="mono text-xs text-emerald-400 mb-2">05 // TECHNICAL COMPETENCIES</div>
-                <h2 class="text-3xl sm:text-4xl font-bold mb-10">Skills & Toolset</h2>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Embedded & Instrumentation -->
-                    <div class="glass-card rounded-2xl p-6">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-lg bg-emerald-400/10 border border-emerald-400/20 text-emerald-400 flex items-center justify-center text-lg">
-                                <i class="fa-solid fa-microchip"></i>
-                            </div>
-                            <h3 class="font-bold text-white text-lg">Embedded & Microcontrollers</h3>
-                        </div>
-                        <p class="text-xs text-slate-400 mb-4">Core microcontrollers and real-time firmware development.</p>
-                        <div class="flex flex-wrap gap-1.5">
-                            <span class="tag-accent text-xs px-2.5 py-1 rounded-md">ESP32 (ESP-IDF / Arduino)</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">STM32 / APM32</span>
-                            <span class="tag-accent text-xs px-2.5 py-1 rounded-md">FreeRTOS (Multitasking)</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">Outseal PLC</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">C / C++</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">Keil uVision</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">STM32CubeIDE</span>
-                        </div>
-                    </div>
-
-                    <!-- Industrial Communication & Protocols -->
-                    <div class="glass-card rounded-2xl p-6">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-lg bg-sky-400/10 border border-sky-400/20 text-sky-400 flex items-center justify-center text-lg">
-                                <i class="fa-solid fa-network-wired"></i>
-                            </div>
-                            <h3 class="font-bold text-white text-lg">Protocols & Telemetry</h3>
-                        </div>
-                        <p class="text-xs text-slate-400 mb-4">Industrial fieldbus and wireless telemetry standards.</p>
-                        <div class="flex flex-wrap gap-1.5">
-                            <span class="tag-accent text-xs px-2.5 py-1 rounded-md">Modbus RTU / TCP</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">RS485 Industrial</span>
-                            <span class="tag-accent text-xs px-2.5 py-1 rounded-md">LoRa P2P Telemetry</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">MQTT / EMQX</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">CAN Bus</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">UART / SPI / I2C</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">ESP-NOW</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">WebSockets</span>
-                        </div>
-                    </div>
-
-                    <!-- Hardware & PCB Design -->
-                    <div class="glass-card rounded-2xl p-6">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-lg bg-indigo-400/10 border border-indigo-400/20 text-indigo-400 flex items-center justify-center text-lg">
-                                <i class="fa-solid fa-layer-group"></i>
-                            </div>
-                            <h3 class="font-bold text-white text-lg">Hardware & Electronics</h3>
-                        </div>
-                        <p class="text-xs text-slate-400 mb-4">Circuit design, prototyping, and CAD modeling.</p>
-                        <div class="flex flex-wrap gap-1.5">
-                            <span class="tag-accent text-xs px-2.5 py-1 rounded-md">KiCad PCB Design</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">Fusion 360 / AutoCAD</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">Circuit Prototyping</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">Sensor Integration & Calibration</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">Power Management</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">Soldering & BOM Assembly</span>
-                        </div>
-                    </div>
-
-                    <!-- Software, ML & Data -->
-                    <div class="glass-card rounded-2xl p-6">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-lg bg-amber-400/10 border border-amber-400/20 text-amber-400 flex items-center justify-center text-lg">
-                                <i class="fa-solid fa-code"></i>
-                            </div>
-                            <h3 class="font-bold text-white text-lg">Software & Edge AI</h3>
-                        </div>
-                        <p class="text-xs text-slate-400 mb-4">Data science, machine learning models, and backend dashboards.</p>
-                        <div class="flex flex-wrap gap-1.5">
-                            <span class="tag-accent text-xs px-2.5 py-1 rounded-md">Python & TensorFlow</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">TensorFlow Lite (ESP32-CAM)</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">MATLAB / Simulink</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">Django / Flask Backend</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">SQL / SQLite / PostgreSQL</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">Jupyter Notebooks</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">Git & GitHub CI</span>
-                        </div>
-                    </div>
-
-                    <!-- Engineering Methodology -->
-                    <div class="glass-card rounded-2xl p-6">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-lg bg-rose-400/10 border border-rose-400/20 text-rose-400 flex items-center justify-center text-lg">
-                                <i class="fa-solid fa-screwdriver-wrench"></i>
-                            </div>
-                            <h3 class="font-bold text-white text-lg">Troubleshooting & QA</h3>
-                        </div>
-                        <p class="text-xs text-slate-400 mb-4">Systematic validation, root-cause analysis, and field testing.</p>
-                        <div class="flex flex-wrap gap-1.5">
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">Root-Cause Analysis (RCA)</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">Signal Processing & Filtering</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">Robotic Kinematics & Motion</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">Technical Documentation</span>
-                            <span class="tag text-xs px-2.5 py-1 rounded-md text-slate-200">Structured Problem Solving</span>
-                        </div>
-                    </div>
-
-                    <!-- Languages & Communication -->
-                    <div class="glass-card rounded-2xl p-6">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-lg bg-teal-400/10 border border-teal-400/20 text-teal-400 flex items-center justify-center text-lg">
-                                <i class="fa-solid fa-language"></i>
-                            </div>
-                            <h3 class="font-bold text-white text-lg">Languages & Soft Skills</h3>
-                        </div>
-                        <p class="text-xs text-slate-400 mb-4">Communication, leadership, and cross-functional agility.</p>
-                        <div class="space-y-2 text-xs">
-                            <div class="flex justify-between items-center"><span class="text-slate-300">Indonesian</span> <span class="tag-accent px-2 py-0.5 rounded">Native</span></div>
-                            <div class="flex justify-between items-center"><span class="text-slate-300">English</span> <span class="tag px-2 py-0.5 rounded text-slate-300">Professional Working Proficiency</span></div>
-                            <div class="flex justify-between items-center"><span class="text-slate-300">Project Management</span> <span class="tag px-2 py-0.5 rounded text-slate-300">Cross-Team & Agile</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="mono text-xs text-emerald-400 mb-2">06 // FORMAL EDUCATION & INTENSIVE PROGRAMS</div>
-            <h2 class="text-3xl sm:text-4xl font-bold mb-10">Education</h2>
-
-            <div class="grid md:grid-cols-2 gap-6">
-                <!-- University -->
-                <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/[.08]">
-                    <div class="flex items-start justify-between gap-4">
-                        <div>
-                            <span class="mono text-xs text-emerald-400 font-semibold">BACHELOR OF ENGINEERING</span>
-                            <h3 class="text-xl font-bold text-white mt-1">Universitas Pembangunan Nasional Veteran Jakarta</h3>
-                            <div class="text-slate-400 text-sm mt-0.5">Electrical Engineering (Concentration in Control & Systems)</div>
-                        </div>
-                        <div class="mono text-xs text-slate-400 px-3 py-1 rounded-full bg-white/[.04] border border-white/[.06] whitespace-nowrap">
-                            2021 – 2025
-                        </div>
-                    </div>
-
-                    <div class="mt-6 space-y-3 text-sm text-slate-300">
-                        <div class="flex items-center gap-2">
-                            <span class="text-slate-400">Cumulative GPA:</span>
-                            <span class="font-bold text-emerald-300 px-2 py-0.5 rounded bg-emerald-400/10 border border-emerald-400/20">3.62 / 4.00</span>
-                        </div>
-                        <div class="pt-2 border-t border-white/[.06]">
-                            <span class="font-semibold text-white block mb-1">Undergraduate Thesis:</span>
-                            <p class="text-xs text-slate-400 leading-relaxed italic">
-                                "Implementation of an IoT Network Website using LoRa Point-To-Point (P2P) for Environmental Radiation Monitoring on a Radiation Portal Monitor"
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bangkit Academy -->
-                <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/[.08]">
-                    <div class="flex items-start justify-between gap-4">
-                        <div>
-                            <span class="mono text-xs text-sky-400 font-semibold">CAREER READINESS & MACHINE LEARNING</span>
-                            <h3 class="text-xl font-bold text-white mt-1">Bangkit Academy</h3>
-                            <div class="text-slate-400 text-sm mt-0.5">Led by Google, Tokopedia, Gojek, & Traveloka</div>
-                        </div>
-                        <div class="mono text-xs text-slate-400 px-3 py-1 rounded-full bg-white/[.04] border border-white/[.06] whitespace-nowrap">
-                            Aug 2023 – Dec 2023
-                        </div>
-                    </div>
-
-                    <div class="mt-6 space-y-3 text-sm text-slate-300">
-                        <div>
-                            <span class="text-slate-400">Track:</span>
-                            <span class="font-semibold text-slate-200"> Machine Learning Specialization</span>
-                        </div>
-                        <div class="pt-2 border-t border-white/[.06]">
-                            <span class="font-semibold text-white block mb-1">Capstone Project:</span>
-                            <p class="text-xs text-slate-400 leading-relaxed">
-                                Developed an edge assistive device integrating TensorFlow Lite model on ESP32-CAM and a backend server for automatic tablet classification for visually impaired individuals.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact CTA Section -->
-        <section id="contact-cta" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mb-8 no-print">
-            <div class="glass-card rounded-3xl p-8 sm:p-12 text-center border border-emerald-400/20 bg-gradient-to-b from-emerald-500/[.06] to-transparent">
-                <span class="mono text-xs text-emerald-400 font-semibold tracking-wider uppercase">GET IN TOUCH</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Let's Build Reliable Engineering Systems Together</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto mt-4 text-sm sm:text-base">
-                    Whether you are looking for an Electrical / Embedded Systems Engineer, Industrial IoT specialist, or hardware-firmware integration partner, feel free to reach out.
-                </p>
-                <div class="flex flex-wrap justify-center gap-4 mt-8">
-                    <a href="mailto:aryagunaabirafdiyasa@gmail.com" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-400 text-slate-950 font-bold hover:bg-emerald-300 transition shadow-[0_0_25px_rgba(52,211,153,0.35)]">
-                        <i class="fa-solid fa-envelope"></i> Send Email
-                    </a>
-                    <a href="https://linkedin.com/in/aryaguna-abi-rafdi-yasa" target="_blank" rel="noopener noreferrer"
-                       class="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-sky-400/30 bg-sky-400/10 text-sky-300 font-semibold hover:bg-sky-400/20 transition">
-                        <i class="fa-brands fa-linkedin"></i> Connect on LinkedIn
-                    </a>
-                    <a href="tel:+6288212206614" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 bg-white/[.04] text-slate-200 font-semibold hover:bg-white/[.08] transition">
-                        <i class="fa-solid fa-phone"></i> Call / WhatsApp
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="relative z-10 border-t border-white/[.06] bg-[#05080c] py-10 text-xs text-slate-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div>© 2026 Aryaguna Abi Rafdi Yasa · Electrical Engineering Graduate</div>
-            <div class="mono text-slate-400 flex items-center gap-4">
-                <a href="#top" class="hover:text-emerald-300 transition">Back to Top ↑</a>
-                <span>·</span>
-                <a href="https://github.com/rafdi03" target="_blank" class="hover:text-emerald-300 transition">GitHub</a>
-                <span>·</span>
-                <a href="https://linkedin.com/in/aryaguna-abi-rafdi-yasa" target="_blank" class="hover:text-emerald-300 transition">LinkedIn</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Certificate Modal Preview -->
-    <div id="cert-modal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md" onclick="closeCertModal(event)">
-        <div class="modal-content glass-card rounded-2xl max-w-3xl w-full max-h-[90vh] flex flex-col overflow-hidden border border-white/[.15] bg-[#0c121c]" onclick="event.stopPropagation()">
-            <div class="p-4 sm:p-5 border-b border-white/[.08] flex items-center justify-between">
-                <div>
-                    <span id="modal-cert-issuer" class="mono text-[11px] text-emerald-400 font-semibold uppercase"></span>
-                    <h3 id="modal-cert-title" class="text-base sm:text-lg font-bold text-white"></h3>
-                </div>
-                <button onclick="hideCertModal()" class="w-8 h-8 rounded-lg bg-white/[.06] hover:bg-white/[.12] text-slate-400 hover:text-white flex items-center justify-center transition">
-                    <i class="fa-solid fa-xmark text-sm"></i>
-                </button>
-            </div>
-            <div class="p-4 sm:p-6 overflow-y-auto flex-1 flex flex-col items-center justify-center bg-black/40">
-                <div id="modal-cert-preview-container" class="w-full flex items-center justify-center min-h-[300px]">
-                    <!-- Dynamic preview injected here -->
-                </div>
-                <p id="modal-cert-desc" class="text-xs text-slate-400 mt-4 text-center max-w-xl"></p>
-            </div>
-            <div class="p-4 border-t border-white/[.08] flex items-center justify-between gap-3 bg-[#090e16]">
-                <span id="modal-cert-date" class="mono text-xs text-slate-500"></span>
-                <div class="flex items-center gap-2">
-                    <a id="modal-cert-file-btn" href="#" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-400 text-slate-950 text-xs font-bold hover:bg-emerald-300 transition">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Full Document / PDF
-                    </a>
-                </div>
-            </div>
-        </div>
+      <div class='md:hidden flex items-center gap-3'>
+        <button onclick='window.print()' class='p-2 rounded-lg bg-emerald-400/10 border border-emerald-400/30 text-emerald-300 text-xs'>
+          <i class='fa-solid fa-file-pdf'></i>
+        </button>
+        <button id='mobile-menu-btn' class='p-2 text-slate-300 hover:text-white focus:outline-none' aria-label='Toggle menu'>
+          <i class='fa-solid fa-bars text-lg'></i>
+        </button>
+      </div>
     </div>
 
-    <!-- Interactive Scripts -->
-    <script>
-        // Projects Data
-        const projectsData = [
-            {
-                id: "project-thesis",
-                title: "IoT Radiation Monitoring System via LoRa P2P",
-                category: "IoT / Telemetry",
-                filterCat: "iot",
-                icon: "fa-tower-broadcast",
-                description: "Long-range environmental radiation telemetry system designed for Radiation Portal Monitors (RPM), leveraging LoRa P2P communication for distributed monitoring in remote industrial environments.",
-                features: [
-                    "Engineered robust LoRa Point-to-Point (P2P) telemetry for extreme remote coverage",
-                    "Edge data buffering and automatic transmission retry mechanisms under unstable network conditions",
-                    "Integrated with application layer via REST API and MQTT broker",
-                    "Comprehensive link budget and performance evaluation (RSSI, latency, SNR, packet loss optimization)"
-                ],
-                tech: ["LoRa P2P", "ESP32", "Modbus", "MQTT", "REST API", "Python", "Radiation Sensor"],
-                github: "https://github.com/rafdi03",
-                images: ["./IoT Radiation Monitoring System via LoRa P2P.jpg"]
-            },
-             {
-                id: "project-modbus-rtu",
-                title: "IoT Radiation Monitoring System via Modbus RTU",
-                category: "IoT / Telemetry",
-                filterCat: "iot",
-                icon: "fa-tower-broadcast",
-                description: "Industrial radiation monitoring system integrating the Ludlum 375 Area Monitor via Modbus RTU over RS-485. Designed for Radiation Portal Monitors (RPM) to ensure highly reliable, real-time data acquisition in harsh industrial environments.",
-                features: [
-                    "Engineered seamless integration with the Ludlum 375 radiation sensor using Modbus RTU (RS-485) for precise and continuous monitoring",
-                    "Developed a robust data polling and parsing mechanism for Modbus registers to extract real-time radiation levels and alarm statuses",
-                    "Bridged industrial wired networks (OT) to the application layer (IT) via MQTT broker and REST API for remote dashboard visualization",
-                    "Implemented fail-safe error handling and timeout recovery for RS-485 communication to ensure data integrity against industrial electrical noise"
-                ],
-                tech: ["Modbus RTU", "RS-485", "Ludlum 375", "ESP32", "MQTT", "REST API", "Python"],
-                github: "https://github.com/rafdi03",
-                images: ["./Modbus_RTU.jpg"]
-            },
-            {
-                id: "project-tablet-ai",
-                title: "Tablet Drug Detection for Visually Impaired (Edge AI)",
-                category: "Edge AI / Embedded ML",
-                filterCat: "ai",
-                icon: "fa-brain",
-                description: "An assistive Edge AI smart device featuring an on-device TensorFlow Lite convolutional neural network on ESP32-CAM to identify and classify prescription medicine for visually impaired individuals.",
-                features: [
-                    "Designed custom compact PCB in KiCad integrating ESP32-CAM, optical sensor, and power circuitry",
-                    "Trained and quantised CNN model deployed with TensorFlow Lite Micro for low-latency inference",
-                    "Full-stack backend integration (Flask/Django) for remote dataset updates and model retraining",
-                    "Real-time multimodal feedback (audio guidance and visual indicator) for safe user interaction"
-                ],
-                tech: ["TensorFlow Lite", "ESP32-CAM", "KiCad PCB", "Python / Flask", "Edge ML", "CNN"],
-                github: "https://github.com/rafdi03",
-                images: ["./Tablet Drug Detection.jpg"]
-            },
-            {
-                id: "project-krsti",
-                title: "Autonomous Dancing Robot - KRSTI",
-                category: "Robotics",
-                filterCat: "robotics",
-                icon: "fa-robot",
-                description: "Developed an autonomous humanoid dancing robot for the Indonesian Art Robot Competition (KRSTI). Engineered to perform complex, synchronized traditional Indonesian dance routines while maintaining dynamic balance and responding to musical cues.",
-                features: [
-                    "Programmed complex kinematic trajectories and joint interpolations to replicate fluid, human-like traditional dance movements",
-                    "Integrated audio processing and sound sensors to synchronize robot choreography accurately with specific music beats",
-                    "Implemented dynamic balancing algorithms to maintain stability during complex single-leg stances and rapid movement transitions",
-                    "Designed and assembled the mechanical structure utilizing high-torque servo motors for precise and reliable joint articulation"
-                ],
-                tech: ["Humanoid Robot", "C/C++", "Inverse Kinematics", "Servo Motors", "Microcontroller", "Audio Processing"],
-                github: "https://github.com/rafdi03",
-                images: ["./20240428_225912.jpg"] // Silakan sesuaikan nama file gambarnya
-            },
-            {
-                id: "project-1",
-                title: "RAF RTOS-ESP32 — Embedded Firmware Framework",
-                category: "Embedded Systems / RTOS",
-                filterCat: "embedded",
-                icon: "fa-microchip",
-                description: "A modular, descriptor-based ESP-IDF firmware framework streamlining development of deterministic real-time ESP32 applications with built-in task scheduling and fault tolerance.",
-                features: [
-                    "Descriptor-based FreeRTOS task scheduler for periodic and event-driven application jobs",
-                    "Centralized multi-protocol communication hub (UART, Modbus, LoRa, Wi-Fi, MQTT, CAN, ESP-NOW)",
-                    "Binary data logging with ping-pong buffering, CRC-32 validation and brownout recovery handling",
-                    "Browser-based OTA firmware updates through an embedded web server interface"
-                ],
-                tech: ["ESP32", "ESP-IDF 5.x", "FreeRTOS", "C / C++", "Modbus", "MQTT", "CAN Bus"],
-                github: "https://github.com/rafdi03/RAF_RTOS-ESP32_0.1v",
-                images: ["./RAF_ESP32.jpeg"]
-            },
-            {
-                id: "project-2",
-                title: "ESP32 Embedded Health Monitoring System",
-                category: "Embedded / Biosensors",
-                filterCat: "embedded",
-                icon: "fa-heart-pulse",
-                description: "Wearable biomedical monitoring system integrating MAX30102 physiological sensors for continuous heart rate, SpO2, and body temperature telemetry.",
-                features: [
-                    "Low-noise digital filtering and peak detection for photoplethysmogram (PPG) waveforms",
-                    "Real-time FreeRTOS tasks ensuring deterministic sensor sampling and power management",
-                    "Telemetry transmission via Wi-Fi and MQTT to interactive cloud dashboards",
-                    "Custom PCB design optimized for compact form factor and noise immunity"
-                ],
-                tech: ["ESP32", "C / C++", "FreeRTOS", "MAX30102", "MQTT", "Grafana", "KiCad"],
-                github: "https://github.com/rafdi03/s3_health_monitor",
-                images: ["./Monitoring_kesehatan_pcb.jpeg", "./Monitoring_kesehatan.jpeg"]
-            },
-            {
-                id: "project-6",
-                title: "Crabs Aquasense — Smart Pond Monitoring & Control",
-                category: "IoT / Smart Aquaculture",
-                filterCat: "iot",
-                icon: "fa-water",
-                description: "Industrial aquaculture monitoring and automated aeration control system using ESP32 sensor nodes, EMQX MQTT broker, and a full-stack Django dashboard.",
-                features: [
-                    "Multi-parameter water quality monitoring (pH, DO, salinity, water level and temperature)",
-                    "Bidirectional remote relay actuation and automated threshold control logic",
-                    "Real-time telemetry streaming via WebSockets and EMQX MQTT broker",
-                    "Custom dual-layer PCB controller board with surge protection"
-                ],
-                tech: ["ESP32", "Python", "Django", "WebSockets", "MQTT / EMQX", "SQLite", "KiCad"],
-                github: "https://github.com/rafdi03/Crabs_project",
-                live: "https://crabs-aquasense.id/login/?next=/",
-                images: ["./Crabs_Desain.jpeg", "./Crabs_pcb.jpeg"]
-            },
-            {
-                id: "project-7",
-                title: "Hybrid Solar & Wind Energy Monitoring (Enerbrida)",
-                category: "Renewable Energy / Industrial IoT",
-                filterCat: "iot",
-                icon: "fa-solar-panel",
-                description: "Smart telemetry and automated power source selection for hybrid photovoltaic and micro-wind turbine systems.",
-                features: [
-                    "Real-time PV voltage, current, battery State of Charge (SOC), and wind generator output",
-                    "Automatic intelligent source selection algorithm based on instantaneous load demand",
-                    "Modbus RTU protocol communication over industrial RS485 and I2C INA219 sensors",
-                    "Telemetry JSON publishing via MQTT with hardware watchdog timer protection"
-                ],
-                tech: ["ESP32", "Modbus RTU", "RS485", "INA219", "MQTT", "FreeRTOS"],
-                github: "https://github.com/rafdi03",
-                live: "https://enerbrida.apps-chi.com/",
-                images: ["./Monitoring_Hybrid.jpeg"]
-            },
-            {
-                id: "project-11",
-                title: "Automated Hydroponic Nutrient & Dosing System",
-                category: "IoT / Smart Agriculture",
-                filterCat: "iot",
-                icon: "fa-seedling",
-                description: "Automated nutrient dosing and water regulation system for precision hydroponics, measuring EC/TDS and water level with multi-channel servo valve control.",
-                features: [
-                    "TDS concentration and ultrasonic reservoir level monitoring with automatic ppm correction",
-                    "Automated 4-channel dosing pumps and 360-degree servo valve flow regulation",
-                    "High-precision RTC timestamping and on-device LCD feedback",
-                    "Automated Telegram alerts and cloud spreadsheet telemetry logging"
-                ],
-                tech: ["ESP32", "C / C++", "TDS Sensor", "JSN-SR04", "DS3231 RTC", "Telegram Bot", "KiCad"],
-                github: "https://github.com/rafdi03/IoT-Based-Hydroponic-Nutrient-Monitoring-System",
-                images: ["./Hydroponic.jpeg", "./Hidroponic_PCB.jpeg"]
-            }
-        ];
+    <div id='mobile-menu' class='hidden md:hidden border-b border-white/[.06] bg-[#0d121a]/95 px-6 py-4 space-y-3 text-sm text-slate-300'>
+      <a href='#about' class='block hover:text-emerald-300 py-1'>About</a>
+      <a href='#experience' class='block hover:text-emerald-300 py-1'>Experience</a>
+      <a href='#projects' class='block hover:text-emerald-300 py-1'>Projects</a>
+      <a href='#certificates' class='block hover:text-emerald-300 py-1'>Certificates</a>
+      <a href='#skills' class='block hover:text-emerald-300 py-1'>Skills</a>
+      <a href='#education' class='block hover:text-emerald-300 py-1'>Education</a>
+      <div class='pt-2 border-t border-white/[.06] flex items-center justify-between'>
+        <a href='https://github.com/rafdi03' target='_blank' rel='noopener noreferrer' class='text-emerald-300 flex items-center gap-1.5'>
+          <i class='fa-brands fa-github'></i> github.com/rafdi03
+        </a>
+      </div>
+    </div>
+  </header>
 
-        // Certificates Data
-        const certsData = [
-            {
-                id: "cert-tf-dev",
-                title: "TensorFlow Developer Certificate Program",
-                issuer: "DeepLearning.AI / TensorFlow (Google)",
-                category: "AI & Machine Learning",
-                filterCat: "ai-ml",
-                date: "Dec 2023 – Dec 2027",
-                badgeIcon: "fa-brain",
-                badgeColor: "text-amber-400",
-                file: "certificates/tensor.pdf",
-                thumb: "certificates/thumbs/tensor.jpg",
-                description: "Demonstrated professional proficiency in building and training deep learning models using TensorFlow, Computer Vision, Convolutional Neural Networks, NLP, and Time Series Forecasting."
-            },
-            {
-                id: "cert-certiport-da",
-                title: "Certified Data Analyst",
-                issuer: "Certiport — A Pearson VUE Business",
-                category: "Data Analytics & SQL",
-                filterCat: "data",
-                date: "December 2024",
-                badgeIcon: "fa-chart-pie",
-                badgeColor: "text-emerald-400",
-                file: "certificates/1727871995749.jpeg",
-                thumb: "certificates/thumbs/1727871995749.jpeg",
-                description: "International Pearson VUE certification validating core competencies in data analysis, statistical modeling, data visualization, and structured problem solving."
-            },
-            {
-                id: "cert-bangkit",
-                title: "Bangkit Academy Graduate — Machine Learning Cohort",
-                issuer: "Google, Tokopedia, Gojek, & Traveloka",
-                category: "AI & Machine Learning",
-                filterCat: "ai-ml",
-                date: "Aug 2023 – Dec 2023",
-                badgeIcon: "fa-graduation-cap",
-                badgeColor: "text-sky-400",
-                file: "certificates/bangkit.pdf",
-                thumb: "certificates/bangkit.pdf",
-                description: "Graduated from Google's intensive career readiness program specializing in Machine Learning, Mathematics for ML, Deep Learning, and deployment of Edge AI capstone projects."
-            },
-            {
-                id: "cert-kmtek-pcb",
-                title: "PCB Design Certification & Hardware Prototyping",
-                issuer: "KMTek Indonesia",
-                category: "Engineering & Hardware",
-                filterCat: "engineering",
-                date: "Certified",
-                badgeIcon: "fa-microchip",
-                badgeColor: "text-teal-400",
-                file: "certificates/KMTek_PCB.png",
-                thumb: "certificates/thumbs/KMTek_PCB.png",
-                description: "Certification in electronic schematic capture, PCB layout routing, component footprints, design rules check (DRC), and production manufacturing preparation."
-            },
-            {
-                id: "cert-krsti-robotics",
-                title: "Kontes Robot Seni Tari Indonesia (KRSTI)",
-                issuer: "Puspresnas / Tim Robotika UPNVJ",
-                category: "Engineering & Hardware",
-                filterCat: "engineering",
-                date: "Certified Robotics Team",
-                badgeIcon: "fa-robot",
-                badgeColor: "text-rose-400",
-                file: "certificates/KRSTI.pdf",
-                thumb: "certificates/thumbs/KRSTI.jpg",
-                description: "National robotics competition delegation for humanoid robotic kinematics, motion synchronization, motor drivers, and sensor integration."
-            },
-            {
-                id: "cert-braincore-ml",
-                title: "Machine Learning Internship Certificate",
-                issuer: "Braincore.id",
-                category: "AI & Machine Learning",
-                filterCat: "ai-ml",
-                date: "January 2024 – March 2024",
-                badgeIcon: "fa-briefcase",
-                badgeColor: "text-indigo-400",
-                file: "certificates/Braincore.pdf",
-                thumb: "certificates/Braincore.pdf",
-                description: "Certified completion of professional machine learning internship covering data pipeline optimization, QA testing frameworks, and ML workflow handovers."
-            },
-            {
-                id: "cert-dqlab-python-viz",
-                title: "Data Visualization in Python",
-                issuer: "DQLab",
-                category: "Data Analytics & SQL",
-                filterCat: "data",
-                date: "Certified",
-                badgeIcon: "fa-chart-line",
-                badgeColor: "text-emerald-400",
-                file: "certificates/certificate-DQLABDVIZ2QIJPWP.pdf",
-                thumb: "certificates/certificate-DQLABDVIZ2QIJPWP.pdf",
-                description: "Mastery in Python data exploration, Matplotlib, Seaborn chart crafting, and visual telemetry representation."
-            },
-            {
-                id: "cert-dqlab-python-ds",
-                title: "Python for Data Science",
-                issuer: "DQLab",
-                category: "Data Analytics & SQL",
-                filterCat: "data",
-                date: "Certified",
-                badgeIcon: "fa-python",
-                badgeColor: "text-blue-400",
-                file: "certificates/certificate-DQLABFATPYLSIVNG.pdf",
-                thumb: "certificates/certificate-DQLABFATPYLSIVNG.pdf",
-                description: "Core algorithms, data structures, Pandas/NumPy data manipulation, and exploratory data analysis."
-            },
-            {
-                id: "cert-dqlab-sql",
-                title: "Applied SQL for Data Science & Database Querying",
-                issuer: "DQLab",
-                category: "Data Analytics & SQL",
-                filterCat: "data",
-                date: "Certified",
-                badgeIcon: "fa-database",
-                badgeColor: "text-amber-400",
-                file: "certificates/certificate-DQLABSQLT1FKMVPK.pdf",
-                thumb: "certificates/certificate-DQLABSQLT1FKMVPK.pdf",
-                description: "Relational queries, table joins, aggregations, database indexing, and structured analytics extraction."
-            },
-            {
-                id: "cert-english-upn",
-                title: "English Language Proficiency Certification",
-                issuer: "Language Center UPN Veteran Jakarta",
-                category: "Language & Soft Skills",
-                filterCat: "softskill",
-                date: "Certified",
-                badgeIcon: "fa-language",
-                badgeColor: "text-purple-400",
-                file: "certificates/2110314027_English.pdf",
-                thumb: "certificates/thumbs/2110314027_English.jpg",
-                description: "Official English proficiency certification demonstrating professional working proficiency in technical documentation, presentation, and international collaboration."
-            },
-            {
-                id: "cert-ibm-skillsbuild",
-                title: "Professional Skills & Career Development",
-                issuer: "IBM SkillsBuild",
-                category: "Language & Soft Skills",
-                filterCat: "softskill",
-                date: "Certified",
-                badgeIcon: "fa-certificate",
-                badgeColor: "text-sky-400",
-                file: "certificates/Completion Certificate _ SkillsBuild.pdf",
-                thumb: "certificates/Completion Certificate _ SkillsBuild.pdf",
-                description: "Credential covering professional workplace competencies, agile methodologies, and effective communication."
-            },
-            {
-                id: "cert-internship-brin",
-                title: "Industrial & Research Internship Record",
-                issuer: "BRIN RI / National Research Standards",
-                category: "Engineering & Hardware",
-                filterCat: "engineering",
-                date: "Certified",
-                badgeIcon: "fa-file-signature",
-                badgeColor: "text-rose-400",
-                file: "certificates/hasil_pemagangan_9815.pdf",
-                thumb: "certificates/thumbs/hasil_pemagangan_9815.jpg",
-                description: "Official verification and formal engineering assessment for industrial telemetry, RS485/Modbus radiation monitoring, and PLC automation."
-            }
-        ];
+  <main id='top' class='relative z-10'>
+    <section class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-16 pb-16'>
+      <div class='max-w-5xl fade-up'>
+        <div class='inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-400/10 border border-emerald-400/20 text-emerald-300 mono text-xs mb-6'>
+          <span class='w-2 h-2 rounded-full bg-emerald-400 animate-pulse'></span>
+          <span>ELECTRICAL & EMBEDDED SYSTEMS ENGINEER · IOT · FIRMWARE</span>
+        </div>
 
-        // Render Projects
-        function renderProjects(category = "all") {
-            const container = document.getElementById("projects-grid");
-            const filtered = category === "all" ? projectsData : projectsData.filter(p => p.filterCat === category);
+        <h1 class='text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight'>
+          Aryaguna Abi<br>
+          <span class='text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-sky-300 to-indigo-300'>Rafdi Yasa.</span>
+        </h1>
 
-            container.innerHTML = filtered.map(p => `
-                <article id="${p.id}" class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
-                    <div>
-                        <div class="relative aspect-[16/9] bg-slate-950 overflow-hidden group">
-                            <img src="${p.images[0]}" alt="${p.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                 onerror="this.src='https://placehold.co/1200x700/101722/94a3b8?text=${encodeURIComponent(p.title)}'">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#0c121c] via-[#0c121c]/40 to-transparent"></div>
-                            <div class="absolute top-4 left-4">
-                                <span class="tag px-3 py-1 rounded-md text-[11px] uppercase tracking-wider font-semibold text-slate-200 backdrop-blur-md">
-                                    <i class="fa-solid ${p.icon} text-emerald-400 mr-1.5"></i> ${p.category}
-                                </span>
-                            </div>
-                        </div>
+        <div class='accent-line h-px w-32 my-6'></div>
 
-                        <div class="p-6 sm:p-7">
-                            <h3 class="text-xl font-bold text-white mb-2">${p.title}</h3>
-                            <p class="text-sm text-slate-400 leading-relaxed mb-6">${p.description}</p>
+        <p class='max-w-3xl text-base sm:text-xl leading-relaxed text-slate-300'>
+          Electrical Engineering graduate focused on building reliable embedded systems, firmware, industrial communication, and IoT solutions from sensor-level hardware to real-time monitoring.
+        </p>
 
-                            <div class="space-y-2 mb-6">
-                                <div class="mono text-[10px] text-slate-500 uppercase tracking-wider font-semibold">Key Highlights:</div>
-                                <ul class="space-y-2">
-                                    ${p.features.map(f => `
-                                        <li class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                                            <span>${f}</span>
-                                        </li>
-                                    `).join("")}
-                                </ul>
-                            </div>
+        <div class='flex flex-wrap items-center gap-3 sm:gap-4 mt-8 text-xs sm:text-sm text-slate-400'>
+          <a href='mailto:aryagunaabirafdiyasa@gmail.com' class='inline-flex items-center gap-2 px-3 py-1.5 rounded-md tag hover:border-emerald-400/40 hover:text-slate-200 transition'>
+            <i class='fa-solid fa-envelope text-emerald-400'></i> aryagunaabirafdiyasa@gmail.com
+          </a>
+          <a href='tel:+6288212206614' class='inline-flex items-center gap-2 px-3 py-1.5 rounded-md tag hover:border-emerald-400/40 hover:text-slate-200 transition'>
+            <i class='fa-solid fa-phone text-sky-400'></i> +62 882-1220-6614
+          </a>
+          <span class='inline-flex items-center gap-2 px-3 py-1.5 rounded-md tag'>
+            <i class='fa-solid fa-location-dot text-rose-400'></i> Kabupaten Bogor, Indonesia
+          </span>
+        </div>
 
-                            <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/[.06]">
-                                ${p.tech.map(t => `<span class="tag text-[11px] px-2.5 py-1 rounded-md text-slate-300">${t}</span>`).join("")}
-                            </div>
-                        </div>
-                    </div>
+        <div class='flex flex-wrap gap-3.5 mt-8 no-print'>
+          <a href='#projects' class='inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-emerald-400 text-slate-950 font-bold hover:bg-emerald-300 transition shadow-[0_0_20px_rgba(52,211,153,0.3)]'>
+            <i class='fa-solid fa-layer-group'></i> Explore Projects
+          </a>
+          <a href='#certificates' class='inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/10 bg-white/[.04] text-slate-200 font-semibold hover:bg-white/[.08] transition'>
+            <i class='fa-solid fa-award text-amber-400'></i> Verified Credentials
+          </a>
+          <a href='https://linkedin.com/in/aryaguna-abi-rafdi-yasa' target='_blank' rel='noopener noreferrer' class='inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-sky-500/20 bg-sky-500/10 text-sky-300 font-semibold hover:bg-sky-500/20 transition'>
+            <i class='fa-brands fa-linkedin'></i> LinkedIn
+          </a>
+          <a href='https://github.com/rafdi03' target='_blank' rel='noopener noreferrer' class='inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/10 bg-white/[.03] text-slate-300 font-semibold hover:bg-white/[.07] transition'>
+            <i class='fa-brands fa-github'></i> GitHub
+          </a>
+        </div>
+      </div>
 
-                    <div class="px-6 sm:px-7 pb-6 pt-2 flex flex-wrap items-center gap-3 no-print">
-                        <a href="${p.github}" target="_blank" rel="noopener noreferrer"
-                           class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/[.05] border border-white/[.08] text-xs font-semibold text-slate-200 hover:bg-white/[.1] transition">
-                            <i class="fa-brands fa-github"></i> Repository
-                        </a>
-                        ${p.live ? `
-                            <a href="${p.live}" target="_blank" rel="noopener noreferrer"
-                               class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-emerald-400 text-slate-950 text-xs font-bold hover:bg-emerald-300 transition">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live System
-                            </a>
-                        ` : ""}
-                    </div>
-                </article>
-            `).join("");
-        }
+      <div class='grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-16'>
+        <div class='glass-card rounded-xl p-5 border-l-2 border-l-emerald-400'>
+          <div class='mono text-[11px] text-slate-500 uppercase'>Specialization</div>
+          <div class='text-lg font-bold text-white mt-1'>Embedded & Firmware</div>
+          <div class='text-xs text-slate-400 mt-1'>ESP32 · STM32/APM32 · FreeRTOS · C/C++</div>
+        </div>
+        <div class='glass-card rounded-xl p-5 border-l-2 border-l-sky-400'>
+          <div class='mono text-[11px] text-slate-500 uppercase'>Industrial Systems</div>
+          <div class='text-lg font-bold text-white mt-1'>Telemetry & Protocols</div>
+          <div class='text-xs text-slate-400 mt-1'>Modbus RTU/TCP · RS485 · LoRa · MQTT</div>
+        </div>
+        <div class='glass-card rounded-xl p-5 border-l-2 border-l-indigo-400'>
+          <div class='mono text-[11px] text-slate-500 uppercase'>AI & Data</div>
+          <div class='text-lg font-bold text-white mt-1'>Edge ML & Analytics</div>
+          <div class='text-xs text-slate-400 mt-1'>TensorFlow Lite · Python · SQL · ESP32-CAM</div>
+        </div>
+        <div class='glass-card rounded-xl p-5 border-l-2 border-l-amber-400'>
+          <div class='mono text-[11px] text-slate-500 uppercase'>Education</div>
+          <div class='text-lg font-bold text-white mt-1'>S.T. Teknik Elektro</div>
+          <div class='text-xs text-slate-400 mt-1'>UPN Veteran Jakarta · GPA 3.62/4.00</div>
+        </div>
+      </div>
+    </section>
 
-        // Render Certificates
-        function renderCertificates(category = "all") {
-            const container = document.getElementById("certificates-grid");
-            const filtered = category === "all" ? certsData : certsData.filter(c => c.filterCat === category);
+    <section id='about' class='border-y border-white/[.06] bg-white/[.015]'>
+      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+        <div class='grid lg:grid-cols-12 gap-10'>
+          <div class='lg:col-span-4'>
+            <div class='mono text-xs text-emerald-400 mb-2'>01 // PROFILE & BACKGROUND</div>
+            <h2 class='text-3xl sm:text-4xl font-bold'>Bridging Hardware, Firmware, and Data.</h2>
+            <div class='mt-6 p-4 rounded-xl glass border border-white/[.08]'>
+              <div class='text-xs text-slate-400 space-y-2'>
+                <div class='flex items-center justify-between'><span class='text-slate-500'>Degree:</span> <span class='font-medium text-slate-200'>B.Eng in Electrical Engineering</span></div>
+                <div class='flex items-center justify-between'><span class='text-slate-500'>GPA:</span> <span class='font-bold text-emerald-300'>3.62 / 4.00</span></div>
+                <div class='flex items-center justify-between'><span class='text-slate-500'>Focus:</span> <span class='text-slate-200'>Control & Embedded Systems</span></div>
+                <div class='flex items-center justify-between'><span class='text-slate-500'>Availability:</span> <span class='text-emerald-400 font-semibold flex items-center gap-1.5'><span class='w-2 h-2 rounded-full bg-emerald-400'></span> Open for Opportunities</span></div>
+              </div>
+            </div>
+          </div>
 
-            container.innerHTML = filtered.map(c => `
-                <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
-                    <div>
-                        <div class="relative aspect-[16/10] bg-slate-950 overflow-hidden flex items-center justify-center p-3 border-b border-white/[.06] cursor-pointer" onclick="openCertModal('${c.id}')">
-                            ${c.thumb.endsWith('.jpg') || c.thumb.endsWith('.jpeg') || c.thumb.endsWith('.png') ? `
-                                <img src="${c.thumb}" alt="${c.title}" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                                <div class="hidden w-full h-full flex-col items-center justify-center text-slate-500 p-4 text-center">
-                                    <i class="fa-solid ${c.badgeIcon} text-4xl mb-2 ${c.badgeColor}"></i>
-                                    <span class="text-xs font-medium text-slate-400">${c.issuer}</span>
-                                </div>
-                            ` : `
-                                <div class="w-full h-full flex flex-col items-center justify-center text-center p-4 bg-[#0a0f17]">
-                                    <i class="fa-solid ${c.badgeIcon} text-4xl mb-3 ${c.badgeColor}"></i>
-                                    <span class="mono text-[11px] text-emerald-400 font-semibold">${c.issuer}</span>
-                                    <span class="text-xs text-slate-400 mt-1 font-medium line-clamp-1">${c.title}</span>
-                                </div>
-                            `}
-                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
-                                <span class="px-3 py-1.5 rounded-lg bg-emerald-400 text-slate-950 text-xs font-bold shadow-lg">
-                                    <i class="fa-solid fa-expand mr-1"></i> Preview
-                                </span>
-                            </div>
-                        </div>
+          <div class='lg:col-span-8 text-slate-300 text-sm sm:text-base leading-relaxed space-y-4'>
+            <p>I am an Electrical Engineering graduate with hands-on experience in engineering projects, industrial systems, troubleshooting, and cross-functional coordination.</p>
+            <p>Through real-world experience at Bintang Racing Team, BRIN RI, Cratinovated, and Braincore.id, I have built reliable firmware, sensors, telemetry systems, and operational workflows across hardware and data layers.</p>
+            <p class='text-slate-400'>I enjoy turning physical signals, embedded logic, and industrial protocols into dependable systems that work in the real world.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                        <div class="p-5">
-                            <div class="flex items-center justify-between gap-2 mb-2">
-                                <span class="mono text-[10px] text-slate-500 uppercase">${c.date}</span>
-                                <span class="tag px-2 py-0.5 rounded text-[10px] text-slate-300">${c.category}</span>
-                            </div>
-                            <h3 class="font-bold text-white text-base leading-snug group-hover:text-emerald-300 transition-colors">${c.title}</h3>
-                            <div class="text-xs text-emerald-400/90 font-medium mt-1">${c.issuer}</div>
-                            <p class="text-xs text-slate-400 mt-3 leading-relaxed line-clamp-3">${c.description}</p>
-                        </div>
-                    </div>
+    <section id='experience' class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+      <div class='flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12'>
+        <div>
+          <div class='mono text-xs text-emerald-400 mb-2'>02 // WORK & INTERNSHIP EXPERIENCE</div>
+          <h2 class='text-3xl sm:text-4xl font-bold'>Professional Experience</h2>
+        </div>
+        <div class='mono text-xs text-slate-500'>6 ROLES COMPLETED / ONGOING</div>
+      </div>
 
-                    <div class="p-5 pt-0 flex items-center justify-between gap-2 no-print border-t border-white/[.04] mt-4">
-                        <button onclick="openCertModal('${c.id}')" class="text-xs font-semibold text-slate-300 hover:text-emerald-300 flex items-center gap-1.5 transition">
-                            <i class="fa-solid fa-eye"></i> View Details
-                        </button>
-                        <a href="${c.file}" target="_blank" rel="noopener noreferrer"
-                           class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/[.05] hover:bg-white/[.1] border border-white/[.08] text-xs font-medium text-slate-200 transition">
-                            <i class="fa-solid fa-file-arrow-down"></i> Document
-                        </a>
-                    </div>
+      <div class='relative space-y-6'>
+        <div class='glass-card rounded-2xl p-6 sm:p-8 border border-white/[.08]'>
+          <div class='flex flex-col md:flex-row md:items-start justify-between gap-4'>
+            <div class='flex items-start gap-4'>
+              <div class='w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center text-xl flex-shrink-0'><i class='fa-solid fa-car-burst'></i></div>
+              <div>
+                <h3 class='text-xl font-bold text-white'>R&D Electrical Engineer</h3>
+                <div class='text-emerald-400 font-medium text-sm mt-0.5'>Bintang Racing Team (BRT)</div>
+              </div>
+            </div>
+            <div class='mono text-xs text-slate-400 px-3 py-1 rounded-full bg-white/[.04] border border-white/[.06] w-fit'>Apr 2026 – Sept 2026</div>
+          </div>
+          <ul class='mt-6 space-y-3 text-sm text-slate-300'>
+            <li class='flex items-start gap-3'><span class='mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0'></span><span><strong>Cross-team coordination:</strong> aligned hardware packaging, fitment, and troubleshooting with production and mechanical teams.</span></li>
+            <li class='flex items-start gap-3'><span class='mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0'></span><span><strong>Root-cause analysis:</strong> investigated sensor noise and system anomalies during vehicle tests to improve data quality and reliability.</span></li>
+          </ul>
+        </div>
+
+        <div class='glass-card rounded-2xl p-6 sm:p-8 border border-white/[.08]'>
+          <div class='flex flex-col md:flex-row md:items-start justify-between gap-4'>
+            <div class='flex items-start gap-4'>
+              <div class='w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center text-xl flex-shrink-0'><i class='fa-solid fa-atom'></i></div>
+              <div>
+                <h3 class='text-xl font-bold text-white'>Research Intern – Nuclear / Industrial Telemetry</h3>
+                <div class='text-sky-300 font-medium text-sm mt-0.5'>BRIN RI</div>
+              </div>
+            </div>
+            <div class='mono text-xs text-slate-400 px-3 py-1 rounded-full bg-white/[.04] border border-white/[.06] w-fit'>June 2024 – Aug 2024</div>
+          </div>
+          <ul class='mt-6 space-y-3 text-sm text-slate-300'>
+            <li class='flex items-start gap-3'><span class='mt-1.5 w-1.5 h-1.5 rounded-full bg-sky-400 flex-shrink-0'></span><span><strong>Telemetry:</strong> set up RS485, Modbus, and LoRa monitoring for industrial radiation applications.</span></li>
+            <li class='flex items-start gap-3'><span class='mt-1.5 w-1.5 h-1.5 rounded-full bg-sky-400 flex-shrink-0'></span><span><strong>Automation:</strong> configured PLC logic and validation checks to reduce measurement drift and improve process reliability.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id='projects' class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/[.06]'>
+      <div class='flex flex-col md:flex-row md:items-end justify-between gap-5 mb-8'>
+        <div>
+          <div class='mono text-xs text-emerald-400 mb-2'>03 // SELECTED ENGINEERING PROJECTS</div>
+          <h2 class='text-3xl sm:text-4xl font-bold'>Featured Projects</h2>
+          <p class='text-slate-400 mt-2 max-w-2xl text-sm sm:text-base'>Embedded systems, wireless telemetry, industrial monitoring, and edge intelligence.</p>
+        </div>
+        <div class='flex flex-wrap gap-2 text-xs no-print'>
+          <button onclick='filterProjects("all")' class='tab-btn project-filter-btn active px-3 py-1.5 rounded-lg border border-white/10 bg-white/[.04] text-slate-300 font-medium transition'>All Projects</button>
+          <button onclick='filterProjects("embedded")' class='tab-btn project-filter-btn px-3 py-1.5 rounded-lg border border-white/10 bg-white/[.04] text-slate-300 font-medium transition'>Embedded & RTOS</button>
+          <button onclick='filterProjects("iot")' class='tab-btn project-filter-btn px-3 py-1.5 rounded-lg border border-white/10 bg-white/[.04] text-slate-300 font-medium transition'>IoT & Telemetry</button>
+          <button onclick='filterProjects("ai")' class='tab-btn project-filter-btn px-3 py-1.5 rounded-lg border border-white/10 bg-white/[.04] text-slate-300 font-medium transition'>Edge AI & ML</button>
+        </div>
+      </div>
+      <div id='projects-grid' class='grid lg:grid-cols-2 gap-6'></div>
+    </section>
+
+    <section id='marquee-section' class='border-y border-white/[.06] overflow-hidden bg-[#090e16] no-print'>
+      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center gap-4'>
+        <span class='mono text-[10px] text-emerald-400 font-bold whitespace-nowrap flex items-center gap-1.5'><i class='fa-solid fa-bolt'></i> QUICK PROJECT INDEX</span>
+        <div class='h-px bg-white/[.08] flex-1'></div>
+      </div>
+      <div class='overflow-hidden pb-6'>
+        <div id='marquee' class='marquee-track flex gap-3'></div>
+      </div>
+    </section>
+
+    <section id='certificates' class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+      <div class='flex flex-col md:flex-row md:items-end justify-between gap-5 mb-8'>
+        <div>
+          <div class='mono text-xs text-amber-400 mb-2'>04 // VERIFIED CREDENTIALS & CERTIFICATIONS</div>
+          <h2 class='text-3xl sm:text-4xl font-bold'>Certificates & Licenses</h2>
+          <p class='text-slate-400 mt-2 max-w-2xl text-sm sm:text-base'>Machine learning, analytics, hardware, and language-related professional certifications.</p>
+        </div>
+        <div class='flex flex-wrap gap-2 text-xs no-print'>
+          <button onclick='filterCerts("all")' class='tab-btn cert-filter-btn active px-3 py-1.5 rounded-lg border border-white/10 bg-white/[.04] text-slate-300 font-medium transition'>All Certificates</button>
+          <button onclick='filterCerts("ai-ml")' class='tab-btn cert-filter-btn px-3 py-1.5 rounded-lg border border-white/10 bg-white/[.04] text-slate-300 font-medium transition'>AI & ML</button>
+          <button onclick='filterCerts("data")' class='tab-btn cert-filter-btn px-3 py-1.5 rounded-lg border border-white/10 bg-white/[.04] text-slate-300 font-medium transition'>Data & SQL</button>
+          <button onclick='filterCerts("engineering")' class='tab-btn cert-filter-btn px-3 py-1.5 rounded-lg border border-white/10 bg-white/[.04] text-slate-300 font-medium transition'>Engineering</button>
+        </div>
+      </div>
+      <div id='certificates-grid' class='grid sm:grid-cols-2 lg:grid-cols-3 gap-5'></div>
+    </section>
+
+    <section id='skills' class='border-y border-white/[.06] bg-white/[.015]'>
+      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+        <div class='mono text-xs text-emerald-400 mb-2'>05 // TECHNICAL COMPETENCIES</div>
+        <h2 class='text-3xl sm:text-4xl font-bold mb-10'>Skills & Toolset</h2>
+        <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
+          <div class='glass-card rounded-2xl p-6'>
+            <div class='flex items-center gap-3 mb-4'>
+              <div class='w-10 h-10 rounded-lg bg-emerald-400/10 border border-emerald-400/20 text-emerald-400 flex items-center justify-center text-lg'><i class='fa-solid fa-microchip'></i></div>
+              <h3 class='font-bold text-white text-lg'>Embedded & Microcontrollers</h3>
+            </div>
+            <div class='flex flex-wrap gap-1.5'>
+              <span class='tag-accent text-xs px-2.5 py-1 rounded-md'>ESP32</span>
+              <span class='tag text-xs px-2.5 py-1 rounded-md text-slate-200'>STM32 / APM32</span>
+              <span class='tag-accent text-xs px-2.5 py-1 rounded-md'>FreeRTOS</span>
+              <span class='tag text-xs px-2.5 py-1 rounded-md text-slate-200'>C / C++</span>
+            </div>
+          </div>
+
+          <div class='glass-card rounded-2xl p-6'>
+            <div class='flex items-center gap-3 mb-4'>
+              <div class='w-10 h-10 rounded-lg bg-sky-400/10 border border-sky-400/20 text-sky-400 flex items-center justify-center text-lg'><i class='fa-solid fa-network-wired'></i></div>
+              <h3 class='font-bold text-white text-lg'>Protocols & Telemetry</h3>
+            </div>
+            <div class='flex flex-wrap gap-1.5'>
+              <span class='tag-accent text-xs px-2.5 py-1 rounded-md'>Modbus RTU / TCP</span>
+              <span class='tag text-xs px-2.5 py-1 rounded-md text-slate-200'>RS485</span>
+              <span class='tag-accent text-xs px-2.5 py-1 rounded-md'>LoRa</span>
+              <span class='tag text-xs px-2.5 py-1 rounded-md text-slate-200'>MQTT / WebSockets</span>
+            </div>
+          </div>
+
+          <div class='glass-card rounded-2xl p-6'>
+            <div class='flex items-center gap-3 mb-4'>
+              <div class='w-10 h-10 rounded-lg bg-indigo-400/10 border border-indigo-400/20 text-indigo-400 flex items-center justify-center text-lg'><i class='fa-solid fa-layer-group'></i></div>
+              <h3 class='font-bold text-white text-lg'>Hardware & Electronics</h3>
+            </div>
+            <div class='flex flex-wrap gap-1.5'>
+              <span class='tag-accent text-xs px-2.5 py-1 rounded-md'>KiCad PCB</span>
+              <span class='tag text-xs px-2.5 py-1 rounded-md text-slate-200'>Circuit Prototyping</span>
+              <span class='tag text-xs px-2.5 py-1 rounded-md text-slate-200'>Sensor Calibration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id='education' class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+      <div class='mono text-xs text-emerald-400 mb-2'>06 // FORMAL EDUCATION</div>
+      <h2 class='text-3xl sm:text-4xl font-bold mb-10'>Education</h2>
+      <div class='grid md:grid-cols-2 gap-6'>
+        <div class='glass-card rounded-2xl p-6 sm:p-8 border border-white/[.08]'>
+          <div class='flex items-start justify-between gap-4'>
+            <div>
+              <span class='mono text-xs text-emerald-400 font-semibold'>BACHELOR OF ENGINEERING</span>
+              <h3 class='text-xl font-bold text-white mt-1'>Universitas Pembangunan Nasional Veteran Jakarta</h3>
+              <div class='text-slate-400 text-sm mt-0.5'>Electrical Engineering (Control & Systems)</div>
+            </div>
+            <div class='mono text-xs text-slate-400 px-3 py-1 rounded-full bg-white/[.04] border border-white/[.06] whitespace-nowrap'>2021 – 2025</div>
+          </div>
+          <div class='mt-6 space-y-3 text-sm text-slate-300'>
+            <div class='flex items-center gap-2'>
+              <span class='text-slate-400'>Cumulative GPA:</span>
+              <span class='font-bold text-emerald-300 px-2 py-0.5 rounded bg-emerald-400/10 border border-emerald-400/20'>3.62 / 4.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class='glass-card rounded-2xl p-6 sm:p-8 border border-white/[.08]'>
+          <div class='flex items-start justify-between gap-4'>
+            <div>
+              <span class='mono text-xs text-sky-400 font-semibold'>CAREER READINESS & ML</span>
+              <h3 class='text-xl font-bold text-white mt-1'>Bangkit Academy</h3>
+              <div class='text-slate-400 text-sm mt-0.5'>Google, Tokopedia, Gojek, & Traveloka</div>
+            </div>
+            <div class='mono text-xs text-slate-400 px-3 py-1 rounded-full bg-white/[.04] border border-white/[.06] whitespace-nowrap'>Aug 2023 – Dec 2023</div>
+          </div>
+          <div class='mt-6 text-sm text-slate-300'>
+            Focused on machine learning specialization, deep learning, and edge AI deployment for practical products.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id='contact-cta' class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mb-8 no-print'>
+      <div class='glass-card rounded-3xl p-8 sm:p-12 text-center border border-emerald-400/20 bg-gradient-to-b from-emerald-500/[.06] to-transparent'>
+        <span class='mono text-xs text-emerald-400 font-semibold tracking-wider uppercase'>GET IN TOUCH</span>
+        <h2 class='text-3xl sm:text-4xl font-extrabold text-white mt-2'>Let's Build Reliable Engineering Systems Together</h2>
+        <div class='flex flex-wrap justify-center gap-4 mt-8'>
+          <a href='mailto:aryagunaabirafdiyasa@gmail.com' class='inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-400 text-slate-950 font-bold hover:bg-emerald-300 transition shadow-[0_0_25px_rgba(52,211,153,0.35)]'>
+            <i class='fa-solid fa-envelope'></i> Send Email
+          </a>
+          <a href='https://linkedin.com/in/aryaguna-abi-rafdi-yasa' target='_blank' rel='noopener noreferrer' class='inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-sky-400/30 bg-sky-400/10 text-sky-300 font-semibold hover:bg-sky-400/20 transition'>
+            <i class='fa-brands fa-linkedin'></i> Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class='relative z-10 border-t border-white/[.06] bg-[#05080c] py-10 text-xs text-slate-500'>
+    <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4'>
+      <div>© 2026 Aryaguna Abi Rafdi Yasa · Electrical Engineering Graduate</div>
+      <div class='mono text-slate-400 flex items-center gap-4'>
+        <a href='#top' class='hover:text-emerald-300 transition'>Back to Top ↑</a>
+        <span>·</span>
+        <a href='https://github.com/rafdi03' target='_blank' class='hover:text-emerald-300 transition'>GitHub</a>
+        <span>·</span>
+        <a href='https://linkedin.com/in/aryaguna-abi-rafdi-yasa' target='_blank' class='hover:text-emerald-300 transition'>LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id='cert-modal' class='modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md' onclick='closeCertModal(event)'>
+    <div class='modal-content glass-card rounded-2xl max-w-3xl w-full max-h-[90vh] flex flex-col overflow-hidden border border-white/[.15] bg-[#0c121c]' onclick='event.stopPropagation()'>
+      <div class='p-4 sm:p-5 border-b border-white/[.08] flex items-center justify-between'>
+        <div>
+          <span id='modal-cert-issuer' class='mono text-[11px] text-emerald-400 font-semibold uppercase'></span>
+          <h3 id='modal-cert-title' class='text-base sm:text-lg font-bold text-white'></h3>
+        </div>
+        <button onclick='hideCertModal()' class='w-8 h-8 rounded-lg bg-white/[.06] hover:bg-white/[.12] text-slate-400 hover:text-white flex items-center justify-center transition'>
+          <i class='fa-solid fa-xmark text-sm'></i>
+        </button>
+      </div>
+      <div class='p-4 sm:p-6 overflow-y-auto flex-1 flex flex-col items-center justify-center bg-black/40'>
+        <div id='modal-cert-preview-container' class='w-full flex items-center justify-center min-h-[300px]'></div>
+        <p id='modal-cert-desc' class='text-xs text-slate-400 mt-4 text-center max-w-xl'></p>
+      </div>
+      <div class='p-4 border-t border-white/[.08] flex items-center justify-between gap-3 bg-[#090e16]'>
+        <span id='modal-cert-date' class='mono text-xs text-slate-500'></span>
+        <a id='modal-cert-file-btn' href='#' target='_blank' class='inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-400 text-slate-950 text-xs font-bold hover:bg-emerald-300 transition'>
+          <i class='fa-solid fa-arrow-up-right-from-square'></i> Open Full Document / PDF
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const projectsData = [
+      {
+        id: 'project-1',
+        title: 'RAF RTOS-ESP32 — Embedded Firmware Framework',
+        category: 'Embedded Systems / RTOS',
+        filterCat: 'embedded',
+        icon: 'fa-microchip',
+        description: 'A modular ESP-IDF firmware framework for deterministic real-time applications, scheduling, communication, and recoverable data logging.',
+        features: [
+          'Descriptor-based FreeRTOS task scheduler for periodic jobs',
+          'Unified communication hub for UART, Modbus, LoRa, Wi-Fi, MQTT, CAN, and ESP-NOW',
+          'Binary data logging with CRC validation and recovery handling',
+          'Browser-based OTA update support through an embedded web server'
+        ],
+        tech: ['ESP32', 'ESP-IDF 5.x', 'FreeRTOS', 'C / C++', 'Modbus', 'MQTT'],
+        github: 'https://github.com/rafdi03/RAF_RTOS-ESP32_0.1v',
+        images: ['./RAF_ESP32.jpeg']
+      },
+      {
+        id: 'project-2',
+        title: 'ESP32 Embedded Health Monitoring System',
+        category: 'Embedded / Biosensors',
+        filterCat: 'embedded',
+        icon: 'fa-heart-pulse',
+        description: 'Wearable biomedical monitoring system measuring heart rate, SpO2, and body temperature with wireless telemetry.',
+        features: [
+          'Low-noise sensor acquisition and filtering',
+          'Real-time FreeRTOS scheduling and deterministic sampling',
+          'Telemetry transmission via Wi-Fi and MQTT to dashboards',
+          'Compact PCB optimized for low noise and signal integrity'
+        ],
+        tech: ['ESP32', 'C / C++', 'FreeRTOS', 'MAX30102', 'MQTT', 'Grafana'],
+        github: 'https://github.com/rafdi03/s3_health_monitor',
+        images: ['./Monitoring_kesehatan_pcb.jpeg']
+      },
+      {
+        id: 'project-6',
+        title: 'Crabs Aquasense — Smart Pond Monitoring & Control',
+        category: 'IoT / Smart Aquaculture',
+        filterCat: 'iot',
+        icon: 'fa-water',
+        description: 'Real-time pond monitoring and control system using ESP32 nodes, MQTT messaging, and a Django dashboard.',
+        features: [
+          'Multi-parameter water-quality monitoring (pH, DO, salinity, temperature)',
+          'Bidirectional remote relay control and threshold logic',
+          'Historical sensor storage and real-time dashboard visibility',
+          'Custom controller board with surge protection'
+        ],
+        tech: ['ESP32', 'Python', 'Django', 'WebSockets', 'MQTT / EMQX', 'SQLite'],
+        github: 'https://github.com/rafdi03/Crabs_project',
+        live: 'https://crabs-aquasense.id/login/?next=/',
+        images: ['./Crabs_Desain.jpeg']
+      },
+      {
+        id: 'project-7',
+        title: 'Hybrid Solar & Wind Energy Monitoring',
+        category: 'Renewable Energy / Industrial IoT',
+        filterCat: 'iot',
+        icon: 'fa-solar-panel',
+        description: 'ESP32-based monitoring and automatic source-selection system for hybrid solar wind collector systems.',
+        features: [
+          'Real-time PV, battery, SOC, and wind output monitoring',
+          'Automatic source selection based on load demand',
+          'Modbus RTU over RS485 and I2C INA219 integration',
+          'MQTT telemetry with watchdog protection'
+        ],
+        tech: ['ESP32', 'Modbus RTU', 'RS485', 'INA219', 'MQTT', 'FreeRTOS'],
+        github: 'https://github.com/rafdi03',
+        live: 'https://enerbrida.apps-chi.com/',
+        images: ['./Monitoring_Hybrid.jpeg']
+      },
+      {
+        id: 'project-11',
+        title: 'Hydroponic Nutrient Monitoring System',
+        category: 'IoT / Smart Agriculture',
+        filterCat: 'iot',
+        icon: 'fa-seedling',
+        description: 'ESP32-based hydroponic monitoring and dosing system for nutrient concentration and water level control.',
+        features: [
+          'TDS and ultrasonic water-level monitoring',
+          'Four-channel relay and servo valve control',
+          'RTC timestamping and LCD status display',
+          'Telegram notifications and cloud spreadsheet logging'
+        ],
+        tech: ['ESP32', 'C / C++', 'TDS Sensor', 'JSN-SR04', 'DS3231', 'Telegram Bot'],
+        github: 'https://github.com/rafdi03/IoT-Based-Hydroponic-Nutrient-Monitoring-System',
+        images: ['./Hydroponic.jpeg']
+      },
+      {
+        id: 'project-tablet-ai',
+        title: 'Tablet Drug Detection for Visually Impaired',
+        category: 'Edge AI / Embedded ML',
+        filterCat: 'ai',
+        icon: 'fa-brain',
+        description: 'On-device TensorFlow Lite solution for detecting and classifying medication with an ESP32-CAM based assistive device.',
+        features: [
+          'Custom compact PCB in KiCad',
+          'Trainable CNN model deployed to edge hardware',
+          'Audio and visual guidance for impaired users',
+          'Backend support for dataset updates and retraining'
+        ],
+        tech: ['TensorFlow Lite', 'ESP32-CAM', 'KiCad PCB', 'Python / Flask', 'Edge ML', 'CNN'],
+        github: 'https://github.com/rafdi03',
+        images: ['./Tablet Drug Detection.jpg']
+      }
+    ];
+
+    const certsData = [
+      {
+        id: 'cert-tf-dev',
+        title: 'TensorFlow Developer Certificate Program',
+        issuer: 'DeepLearning.AI / TensorFlow (Google)',
+        category: 'AI & Machine Learning',
+        filterCat: 'ai-ml',
+        date: 'Dec 2023 – Dec 2027',
+        badgeIcon: 'fa-brain',
+        badgeColor: 'text-amber-400',
+        file: 'certificates/tensor.pdf',
+        thumb: 'certificates/thumbs/tensor.jpg',
+        description: 'Demonstrated proficiency in building and training deep learning models, computer vision, NLP and forecasting.'
+      },
+      {
+        id: 'cert-certiport-da',
+        title: 'Certified Data Analyst',
+        issuer: 'Certiport — A Pearson VUE Business',
+        category: 'Data Analytics & SQL',
+        filterCat: 'data',
+        date: 'December 2024',
+        badgeIcon: 'fa-chart-pie',
+        badgeColor: 'text-emerald-400',
+        file: 'certificates/1727871995749.jpeg',
+        thumb: 'certificates/thumbs/1727871995749.jpeg',
+        description: 'Validation of core competencies in data analysis, statistical modeling, and structured problem solving.'
+      },
+      {
+        id: 'cert-kmtek-pcb',
+        title: 'PCB Design Certification & Hardware Prototyping',
+        issuer: 'KMTek Indonesia',
+        category: 'Engineering & Hardware',
+        filterCat: 'engineering',
+        date: 'Certified',
+        badgeIcon: 'fa-microchip',
+        badgeColor: 'text-teal-400',
+        file: 'certificates/KMTek_PCB.png',
+        thumb: 'certificates/thumbs/KMTek_PCB.png',
+        description: 'Certification in schematic capture, PCB layout, DRC, design rules, and production preparation.'
+      },
+      {
+        id: 'cert-bangkit',
+        title: 'Bangkit Academy Graduate — Machine Learning Cohort',
+        issuer: 'Google, Tokopedia, Gojek, & Traveloka',
+        category: 'AI & Machine Learning',
+        filterCat: 'ai-ml',
+        date: 'Aug 2023 – Dec 2023',
+        badgeIcon: 'fa-graduation-cap',
+        badgeColor: 'text-sky-400',
+        file: 'certificates/bangkit.pdf',
+        thumb: 'certificates/bangkit.pdf',
+        description: 'Graduated from one of Indonesia’s strongest career-readiness programs for machine learning and AI deployment.'
+      },
+      {
+        id: 'cert-english-upn',
+        title: 'English Language Proficiency Certification',
+        issuer: 'Language Center UPN Veteran Jakarta',
+        category: 'Language & Soft Skills',
+        filterCat: 'data',
+        date: 'Certified',
+        badgeIcon: 'fa-language',
+        badgeColor: 'text-purple-400',
+        file: 'certificates/2110314027_English.pdf',
+        thumb: 'certificates/thumbs/2110314027_English.jpg',
+        description: 'Official certification demonstrating professional working proficiency in technical communication.'
+      },
+      {
+        id: 'cert-internship-brin',
+        title: 'Industrial & Research Internship Record',
+        issuer: 'BRIN RI / National Research Standards',
+        category: 'Engineering & Hardware',
+        filterCat: 'engineering',
+        date: 'Certified',
+        badgeIcon: 'fa-file-signature',
+        badgeColor: 'text-rose-400',
+        file: 'certificates/hasil_pemagangan_9815.pdf',
+        thumb: 'certificates/thumbs/hasil_pemagangan_9815.jpg',
+        description: 'Verification of industrial telemetry, RS485/Modbus radiation monitoring, and research operations.'
+      }
+    ];
+
+    function renderProjects(category = 'all') {
+      const container = document.getElementById('projects-grid');
+      const filtered = category === 'all' ? projectsData : projectsData.filter(p => p.filterCat === category);
+
+      container.innerHTML = filtered.map(p => `
+        <article id='${p.id}' class='glass-card rounded-2xl overflow-hidden flex flex-col justify-between'>
+          <div>
+            <div class='relative aspect-[16/9] bg-slate-950 overflow-hidden group'>
+              <img src='${p.images[0]}' alt='${p.title}' class='w-full h-full object-cover transition-transform duration-700 group-hover:scale-105' onerror="this.src='https://placehold.co/1200x700/101722/94a3b8?text=${encodeURIComponent(p.title)}'">
+              <div class='absolute inset-0 bg-gradient-to-t from-[#0c121c] via-[#0c121c]/40 to-transparent'></div>
+              <div class='absolute top-4 left-4'>
+                <span class='tag px-3 py-1 rounded-md text-[11px] uppercase tracking-wider font-semibold text-slate-200 backdrop-blur-md'>
+                  <i class='fa-solid ${p.icon} text-emerald-400 mr-1.5'></i> ${p.category}
+                </span>
+              </div>
+            </div>
+            <div class='p-6 sm:p-7'>
+              <h3 class='text-xl font-bold text-white mb-2'>${p.title}</h3>
+              <p class='text-sm text-slate-400 leading-relaxed mb-6'>${p.description}</p>
+              <div class='space-y-2 mb-6'>
+                <div class='mono text-[10px] text-slate-500 uppercase tracking-wider font-semibold'>Key Highlights:</div>
+                <ul class='space-y-2'>
+                  ${p.features.map(f => `
+                    <li class='flex items-start gap-2.5 text-xs sm:text-sm text-slate-300'>
+                      <span class='mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0'></span>
+                      <span>${f}</span>
+                    </li>
+                  `).join('')}
+                </ul>
+              </div>
+              <div class='flex flex-wrap gap-1.5 pt-4 border-t border-white/[.06]'>
+                ${p.tech.map(t => `<span class='tag text-[11px] px-2.5 py-1 rounded-md text-slate-300'>${t}</span>`).join('')}
+              </div>
+            </div>
+          </div>
+
+          <div class='px-6 sm:px-7 pb-6 pt-2 flex flex-wrap items-center gap-3 no-print'>
+            <a href='${p.github}' target='_blank' rel='noopener noreferrer' class='inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/[.05] border border-white/[.08] text-xs font-semibold text-slate-200 hover:bg-white/[.1] transition'>
+              <i class='fa-brands fa-github'></i> Repository
+            </a>
+            ${p.live ? `
+              <a href='${p.live}' target='_blank' rel='noopener noreferrer' class='inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-emerald-400 text-slate-950 text-xs font-bold hover:bg-emerald-300 transition'>
+                <i class='fa-solid fa-arrow-up-right-from-square'></i> Live System
+              </a>
+            ` : ''}
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function renderCertificates(category = 'all') {
+      const container = document.getElementById('certificates-grid');
+      const filtered = category === 'all' ? certsData : certsData.filter(c => c.filterCat === category);
+
+      container.innerHTML = filtered.map(c => `
+        <div class='glass-card rounded-2xl overflow-hidden flex flex-col justify-between group'>
+          <div>
+            <div class='relative aspect-[16/10] bg-slate-950 overflow-hidden flex items-center justify-center p-3 border-b border-white/[.06] cursor-pointer' onclick="openCertModal('${c.id}')">
+              ${c.thumb.endsWith('.jpg') || c.thumb.endsWith('.jpeg') || c.thumb.endsWith('.png') ? `
+                <img src='${c.thumb}' alt='${c.title}' class='w-full h-full object-contain transition-transform duration-500 group-hover:scale-105' onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class='hidden w-full h-full flex-col items-center justify-center text-slate-500 p-4 text-center'>
+                  <i class='fa-solid ${c.badgeIcon} text-4xl mb-2 ${c.badgeColor}'></i>
+                  <span class='text-xs font-medium text-slate-400'>${c.issuer}</span>
                 </div>
-            `).join("");
-        }
+              ` : `
+                <div class='w-full h-full flex flex-col items-center justify-center text-center p-4 bg-[#0a0f17]'>
+                  <i class='fa-solid ${c.badgeIcon} text-4xl mb-3 ${c.badgeColor}'></i>
+                  <span class='mono text-[11px] text-emerald-400 font-semibold'>${c.issuer}</span>
+                  <span class='text-xs text-slate-400 mt-1 font-medium line-clamp-1'>${c.title}</span>
+                </div>
+              `}
+              <div class='absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2'>
+                <span class='px-3 py-1.5 rounded-lg bg-emerald-400 text-slate-950 text-xs font-bold shadow-lg'>
+                  <i class='fa-solid fa-expand mr-1'></i> Preview
+                </span>
+              </div>
+            </div>
 
-        // Project Filter Handler
-        function filterProjects(category) {
-            document.querySelectorAll(".project-filter-btn").forEach(btn => btn.classList.remove("active"));
-            event.target.classList.add("active");
-            renderProjects(category);
-        }
+            <div class='p-5'>
+              <div class='flex items-center justify-between gap-2 mb-2'>
+                <span class='mono text-[10px] text-slate-500 uppercase'>${c.date}</span>
+                <span class='tag px-2 py-0.5 rounded text-[10px] text-slate-300'>${c.category}</span>
+              </div>
+              <h3 class='font-bold text-white text-base leading-snug group-hover:text-emerald-300 transition-colors'>${c.title}</h3>
+              <div class='text-xs text-emerald-400/90 font-medium mt-1'>${c.issuer}</div>
+              <p class='text-xs text-slate-400 mt-3 leading-relaxed line-clamp-3'>${c.description}</p>
+            </div>
+          </div>
 
-        // Certificate Filter Handler
-        function filterCerts(category) {
-            document.querySelectorAll(".cert-filter-btn").forEach(btn => btn.classList.remove("active"));
-            event.target.classList.add("active");
-            renderCertificates(category);
-        }
+          <div class='p-5 pt-0 flex items-center justify-between gap-2 no-print border-t border-white/[.04] mt-4'>
+            <button onclick="openCertModal('${c.id}')" class='text-xs font-semibold text-slate-300 hover:text-emerald-300 flex items-center gap-1.5 transition'>
+              <i class='fa-solid fa-eye'></i> View Details
+            </button>
+            <a href='${c.file}' target='_blank' rel='noopener noreferrer' class='inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/[.05] hover:bg-white/[.1] border border-white/[.08] text-xs font-medium text-slate-200 transition'>
+              <i class='fa-solid fa-file-arrow-down'></i> Document
+            </a>
+          </div>
+        </div>
+      `).join('');
+    }
 
-        // Marquee Renderer
-        function renderMarquee() {
-            const repeated = [...projectsData, ...projectsData];
-            document.getElementById("marquee").innerHTML = repeated.map(p => `
-                <button onclick="scrollToProject('${p.id}')"
-                        class="glass-card flex-shrink-0 rounded-xl px-4 py-3 min-w-64 text-left hover:border-emerald-400/40 transition">
-                    <div class="flex items-center gap-3">
-                        <span class="w-8 h-8 rounded-lg bg-emerald-400/10 border border-emerald-400/20 flex items-center justify-center text-emerald-400 flex-shrink-0">
-                            <i class="fa-solid ${p.icon} text-xs"></i>
-                        </span>
-                        <div class="overflow-hidden">
-                            <span class="mono block text-[9px] text-slate-500 uppercase truncate">${p.category}</span>
-                            <span class="block text-xs font-bold text-slate-200 truncate">${p.title}</span>
-                        </div>
-                    </div>
-                </button>
-            `).join("");
-        }
+    function filterProjects(category) {
+      document.querySelectorAll('.project-filter-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      renderProjects(category);
+    }
 
-        function scrollToProject(projectId) {
-            const target = document.getElementById(projectId);
-            if (!target) return;
-            target.scrollIntoView({ behavior: "smooth", block: "center" });
-            target.classList.remove("highlight");
-            setTimeout(() => target.classList.add("highlight"), 250);
-        }
+    function filterCerts(category) {
+      document.querySelectorAll('.cert-filter-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      renderCertificates(category);
+    }
 
-        // Certificate Modal Handlers
-        function openCertModal(certId) {
-            const cert = certsData.find(c => c.id === certId);
-            if (!cert) return;
+    function renderMarquee() {
+      const repeated = [...projectsData, ...projectsData];
+      document.getElementById('marquee').innerHTML = repeated.map(p => `
+        <button onclick="scrollToProject('${p.id}')" class='glass-card flex-shrink-0 rounded-xl px-4 py-3 min-w-64 text-left hover:border-emerald-400/40 transition'>
+          <div class='flex items-center gap-3'>
+            <span class='w-8 h-8 rounded-lg bg-emerald-400/10 border border-emerald-400/20 flex items-center justify-center text-emerald-400 flex-shrink-0'>
+              <i class='fa-solid ${p.icon} text-xs'></i>
+            </span>
+            <div class='overflow-hidden'>
+              <span class='mono block text-[9px] text-slate-500 uppercase truncate'>${p.category}</span>
+              <span class='block text-xs font-bold text-slate-200 truncate'>${p.title}</span>
+            </div>
+          </div>
+        </button>
+      `).join('');
+    }
 
-            document.getElementById("modal-cert-issuer").textContent = cert.issuer;
-            document.getElementById("modal-cert-title").textContent = cert.title;
-            document.getElementById("modal-cert-desc").textContent = cert.description;
-            document.getElementById("modal-cert-date").textContent = "Issue Date: " + cert.date;
-            document.getElementById("modal-cert-file-btn").href = cert.file;
+    function scrollToProject(projectId) {
+      const target = document.getElementById(projectId);
+      if (!target) return;
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      target.classList.remove('highlight');
+      setTimeout(() => target.classList.add('highlight'), 250);
+    }
 
-            const previewContainer = document.getElementById("modal-cert-preview-container");
-            if (cert.thumb.endsWith('.jpg') || cert.thumb.endsWith('.jpeg') || cert.thumb.endsWith('.png')) {
-                previewContainer.innerHTML = `<img src="${cert.thumb}" alt="${cert.title}" class="max-h-[60vh] max-w-full rounded-lg shadow-2xl object-contain">`;
-            } else if (cert.file.endsWith('.pdf')) {
-                previewContainer.innerHTML = `
-                    <div class="w-full h-[55vh] rounded-lg overflow-hidden border border-white/[.1]">
-                        <iframe src="${cert.file}#toolbar=0" class="w-full h-full bg-slate-900" title="${cert.title}"></iframe>
-                    </div>
-                `;
-            } else {
-                previewContainer.innerHTML = `
-                    <div class="p-12 text-center text-slate-400">
-                        <i class="fa-solid ${cert.badgeIcon} text-6xl text-emerald-400 mb-4"></i>
-                        <p class="text-sm">Official verified digital credential from ${cert.issuer}</p>
-                    </div>
-                `;
-            }
+    function openCertModal(certId) {
+      const cert = certsData.find(c => c.id === certId);
+      if (!cert) return;
 
-            const modal = document.getElementById("cert-modal");
-            modal.classList.add("active");
-            document.body.style.overflow = "hidden";
-        }
+      document.getElementById('modal-cert-issuer').textContent = cert.issuer;
+      document.getElementById('modal-cert-title').textContent = cert.title;
+      document.getElementById('modal-cert-desc').textContent = cert.description;
+      document.getElementById('modal-cert-date').textContent = 'Issue Date: ' + cert.date;
+      document.getElementById('modal-cert-file-btn').href = cert.file;
 
-        function hideCertModal() {
-            const modal = document.getElementById("cert-modal");
-            modal.classList.remove("active");
-            document.body.style.overflow = "";
-            document.getElementById("modal-cert-preview-container").innerHTML = "";
-        }
+      const previewContainer = document.getElementById('modal-cert-preview-container');
+      if (cert.thumb.endsWith('.jpg') || cert.thumb.endsWith('.jpeg') || cert.thumb.endsWith('.png')) {
+        previewContainer.innerHTML = `<img src='${cert.thumb}' alt='${cert.title}' class='max-h-[60vh] max-w-full rounded-lg shadow-2xl object-contain'>`;
+      } else if (cert.file.endsWith('.pdf')) {
+        previewContainer.innerHTML = `
+          <div class='w-full h-[55vh] rounded-lg overflow-hidden border border-white/[.1]'>
+            <iframe src='${cert.file}#toolbar=0' class='w-full h-full bg-slate-900' title='${cert.title}'></iframe>
+          </div>
+        `;
+      } else {
+        previewContainer.innerHTML = `
+          <div class='p-12 text-center text-slate-400'>
+            <i class='fa-solid ${cert.badgeIcon} text-6xl text-emerald-400 mb-4'></i>
+            <p class='text-sm'>Official verified digital credential from ${cert.issuer}</p>
+          </div>
+        `;
+      }
 
-        function closeCertModal(event) {
-            if (event.target === document.getElementById("cert-modal")) {
-                hideCertModal();
-            }
-        }
+      const modal = document.getElementById('cert-modal');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
 
-        // Keydown listener for modal ESC
-        document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape") hideCertModal();
-        });
+    function hideCertModal() {
+      const modal = document.getElementById('cert-modal');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+      document.getElementById('modal-cert-preview-container').innerHTML = '';
+    }
 
-        // Mobile Menu Toggle
-        document.getElementById("mobile-menu-btn").addEventListener("click", () => {
-            const menu = document.getElementById("mobile-menu");
-            menu.classList.toggle("hidden");
-        });
+    function closeCertModal(event) {
+      if (event.target === document.getElementById('cert-modal')) {
+        hideCertModal();
+      }
+    }
 
-        // Initial Render
-        renderProjects();
-        renderCertificates();
-        renderMarquee();
-    </script>
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') hideCertModal();
+    });
+
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    renderProjects();
+    renderCertificates();
+    renderMarquee();
+  </script>
 </body>
 </html>
+
