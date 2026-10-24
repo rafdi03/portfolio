@@ -919,6 +919,42 @@
         // Projects Data
         const projectsData = [
             {
+                id: "project-raspberry-hat",
+                title: "Raspberry Pi HAT Pin & I/O Expander Board",
+                category: "Hardware / Embedded Expansion",
+                filterCat: "embedded",
+                icon: "fa-microchip",
+                description: "Custom Raspberry Pi HAT expansion PCB engineered for industrial interfacing, digital I/O expansion via I2C, optocoupled isolation, and multi-channel relay control.",
+                features: [
+                    "I2C I/O Expansion via MCP23017 (DIP-28) providing 16 additional GPIO channels with address configurability",
+                    "Galvanic signal isolation using PC817 optocouplers and S8050 NPN driver stages for noise-free relay switching",
+                    "Integrated 5VDC SPDT relays (Sanyou/Songle) with 1N4007 flyback diodes and dedicated LED state indicators",
+                    "Heavy-duty screw terminal blocks (15-pin & 11-pin, 5.0mm pitch) and 2x20 stackable female GPIO header with M2.5 brass standoffs",
+                    "Robust power conditioning and filtering utilizing SMD 1206/0805 passives and radial electrolytic bulk decoupling capacitors"
+                ],
+                tech: ["MCP23017 (I2C)", "PC817 Optocoupler", "S8050 NPN", "5V Relay SPDT", "KiCad PCB", "Raspberry Pi HAT", "SMD & THT Assembly"],
+                github: "https://github.com/rafdi03",
+                images: ["./Raspberry_HAT_Extand_Pin.png"]
+            },
+            {
+                id: "project-tambak-monitoring",
+                title: "Smart Aquaculture (Tambak) Monitoring & Control Station",
+                category: "IoT / Industrial Aquaculture",
+                filterCat: "iot",
+                icon: "fa-water",
+                description: "Comprehensive telemetry and automation station for aquaculture ponds (tambak) powered by LILYGO T-Call SIM800L, Modbus RS-485, multi-sensor analog front-end, and high-power actuator switching.",
+                features: [
+                    "Core telemetry via LILYGO T-Call SIM800L cellular gateway with onboard micro-SD logging and buck DC-DC power regulation",
+                    "Dual PCF8574AP I2C expanders coupled with 16-bit ADS1115 ADC for ultra-precise multi-parameter analog/digital sensor ingestion",
+                    "Industrial Modbus RTU interface via MAX485 transceiver for long-range external sensors (DO, TDS, temperature, ultrasonic)",
+                    "Isolated 5-channel relay subsystem (PC817 + S8050 + 1N4148) and dual IRLZ44N N-Channel MOSFET drivers for high-current loads (J30/J31)",
+                    "Comprehensive power stage protection with 1N5822 Schottky diodes, barrel jack input (J26), push-button controls, and full status LED arrays"
+                ],
+                tech: ["LILYGO T-Call SIM800L", "ADS1115 (16-bit ADC)", "PCF8574AP (I2C)", "MAX485 / Modbus", "IRLZ44N MOSFET", "PC817 & Relays", "KiCad PCB"],
+                github: "https://github.com/rafdi03",
+                images: ["./Monitoring_Tambak.png"]
+            },
+            {
                 id: "project-thesis",
                 title: "IoT Radiation Monitoring System via LoRa P2P",
                 category: "IoT / Telemetry",
